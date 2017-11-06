@@ -8,16 +8,29 @@
        
         <header class="main-header">
             <nav class="main-nav">
-                <a class="main-logo"><img src="logo.svg" width="154" height="64" alt="Магазин Глейси"></a>
+                <a class="main-logo" ><img src="logo.svg" width="154" height="64" alt="Магазин Глейси"></a>
                 <ul class="site-nav">
-                    <li class="site-nav-item"><a href="catalog.html">Каталог</a></li>
-                    <li class="site-nav-item"><a href="delivery-and-payment.html">Доставка и оплата</a></li>
-                    <li class="site-nav-item"><a href="about-company.hteml">О Компании</a></li>
+                    <li class="site-nav-item"><a href="#">Каталог</a>
+                        <ul class="dropdown main-dropdown">
+                            <li class="dropdown-item"><a href="catalog.html">Сливочное</a></li>
+                            <li class="dropdown-item dropdown-item-current"><a href="#">Щербеты</a></li>
+                            <li class="dropdown-item"><a href="#">Фруктовый лед</a></li>
+                            <li class="dropdown-item"><a href="#">Мелорин</a></li>
+                       </ul>
+                    </li>
+                    <li class="site-nav-item"><a href="#">Доставка и оплата</a></li>
+                    <li class="site-nav-item"><a href="#">О Компании</a></li>
                 </ul>
-                <div class="search">Поиск</div>
+                <div class="search">Поиск
+                    <!--здесь будет форма-->
+                    <a class="btn search-btn" href="#">Что ищем?</a>
+                </div>
                 <div class="user-block">
                     <ul class="user-nav">
-                        <li class="login-link">Вход</li>
+                        <li class="login-link">Вход
+                            <a href="#">Забыли пароль?</a>
+                            <a href="#">Новая регистрация</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="cart">Пусто</div>
@@ -78,7 +91,7 @@
                   <li class="bestseller-item ">
                       <a href="#">
                           <h3 class="bestseller-item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-                          <img class="bestseller-img" src="http://placehold.it/61x61" width="61" height="61" alt="Хит"> <!--Картинка со словом ХИТ это декоративное изображение?-->
+                          <img class="bestseller-img" src="http://placehold.it/61x61" width="61" height="61" alt="Хит"> 
                           <img class="bestseller-photo" src="http://placehold.it/267x267" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                           <p class="bestseller-item-price">310Р<span>/кг</span></p> 
                       </a>
@@ -86,7 +99,7 @@
                   <li class="bestseller-item">
                       <a href="#">
                           <h3 class="bestseller-item-title">Сливочно-кофейное с кусочками шоколада</h3>
-                          <img class="bestseller-img" src="http://placehold.it/61x61" width="61" height="61" alt="Хит"> <!--Картинка со словом ХИТ это декоративное изображение?-->
+                          <img class="bestseller-img" src="http://placehold.it/61x61" width="61" height="61" alt="Хит"> 
                           <img class="bestseller-photo" src="http://placehold.it/267x267" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
                           <p class="bestseller-item-price">380Р<span>/кг</span></p> 
                       </a>
@@ -94,7 +107,7 @@
                    <li class="bestseller-item">
                       <a href="#">
                           <h3 class="bestseller-item-title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
-                          <img class="bestseller-img" src="http://placehold.it/61x61" width="61" height="61" alt="Хит"> <!--Картинка со словом ХИТ это декоративное изображение?-->
+                          <img class="bestseller-img" src="http://placehold.it/61x61" width="61" height="61" alt="Хит"> 
                           <img class="bestseller-photo" src="http://placehold.it/267x267" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                           <p class="bestseller-item-price">355Р<span>/кг</span></p> 
                       </a>
@@ -102,7 +115,7 @@
                   <li class="bestseller-item">
                       <a href="#">
                           <h3 class="bestseller-item-title">Сливочное крем-брюле с карамельной подливкой</h3>
-                          <img class="bestseller-img" src="http://placehold.it/61x61" width="61" height="61" alt="Хит"> <!--Картинка со словом ХИТ это декоративное изображение?-->
+                          <img class="bestseller-img" src="http://placehold.it/61x61" width="61" height="61" alt="Хит"> 
                           <img class="bestseller-photo" src="http://placehold.it/267x267" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                           <p class="bestseller-item-price">415Р<span>/кг</span></p>
                       </a>
@@ -132,72 +145,53 @@
             </section>
             
             <section class="map">
-                <h2 class="invisible">Карта проезда</h2>
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1c6787fd46b19f710011dc9cfa6d8921ccb486edf363d824ad65b3fb8b5ff608&amp;width=1200&amp;height=430&amp;lang=ru_RU&amp;scroll=true"></script>
-                <!--здесь будет карта-->
-                <div class="map-text-block">
-                    <p class="map-text">
-                        Адрес главного офиса и офлайн-магазина:<br>
-                        <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
-                    </p>
-                    <p class="map-text">
-                        Для заказов по телефону:<br>
-                        <b>8 812 450-25-25</b>
+                <div class="container">
+                    <h2 class="invisible">Карта проезда</h2>
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1c6787fd46b19f710011dc9cfa6d8921ccb486edf363d824ad65b3fb8b5ff608&amp;width=1200&amp;height=430&amp;lang=ru_RU&amp;scroll=true"></script>
+                    <!--здесь будет карта-->
+                    <div class="map-text-block">
+                        <p class="map-text">
+                            Адрес главного офиса и офлайн-магазина:
+                            <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
                         </p>
-                    <p class="map-text">
-                        (с 10 до 20 ежедневно)
-                    </p>
-                   <a class="btn feedback-btn" href="#">Форма обратной связи</a>
+                        <p class="map-text">
+                            Для заказов по телефону:
+                            <b>8 812 450-25-25</b>
+                        </p>
+                        <p class="map-text">
+                            (с 10 до 20 ежедневно)
+                        </p>
+                        <a class="btn feedback-btn" href="#">Форма обратной связи</a>
+                    </div>
                 </div>
             </section>
         </main>
         
         <footer class="main-footer">
-            <div class="footer-social">
+            <div class="container">
+                <div class="footer-social">
                 <ul>
                     <li><a class="btn social-btn">Твиттер</a></li>
                     <li><a class="btn social-btn">Инстаграм</a></li>
                     <li><a class="btn social-btn">Фуйсбук</a></li>
                     <li><a class="btn social-btn">Вконтакте</a></li>
                 </ul>
-            </div>
-            <div class="supplier-info">
-                <h3 class="supplier-info-title">Для поставщиков</h3>
-                <ul>
-                    <li><a href="#">О производстве</a></li>
-                    <li><a href="#">Наши документы</a></li>
-                    <li><a href="#">Экологические стандарты</a></li>
-                </ul>
-            </div>
+                </div>
+                <div class="supplier-info">
+                    <h3 class="supplier-info-title">Для поставщиков</h3>
+                    <ul>
+                        <li><a href="#">О производстве</a></li>
+                        <li><a href="#">Наши документы</a></li>
+                        <li><a href="#">Экологические стандарты</a></li>
+                    </ul>
+                </div>
             
-            <p class="footer-copyright">
-                <a href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTML Academy"></a>
-                Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> 2017 год
-            </p>
+                <p class="footer-copyright">
+                    <a href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTML Academy"></a>
+                    Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> 2017 год
+                </p>
+            </div>
         </footer>
-        
-        <section class="dropdown main-dropdown">
-            <h2 class="main-dropdown-title">Новинки</h2>
-            <ul>
-                <li class="dropdown-item"><a href="#">Сливочное</a></li>
-                <li class="dropdown-item dropdown-item-current"><a href="#">Щербеты</a></li>
-                <li class="dropdown-item"><a href="#">Фруктовый лед</a></li>
-                <li class="dropdown-item"><a href="#">Мелорин</a></li>
-            </ul>
-        </section>
-        
-        <section class="modal modal-login">
-            <h2 class="invisible">Форма входа</h2>
-            <!-- здесь будет форма -->
-            <a href="#">Забыли пароль?</a><br>
-            <a href="#">Новая регистрация</a>
-        </section>
-        
-        <section class="search">
-            <h2 class="invisible">Поиск</h2>
-             <!-- поиск это что? -->
-            <a class="btn search-btn" href="#">Что ищем?</a>
-        </section>
         
         <section class="modal modal-feedback">
             <h2 class="modal-feedback-title">Мы обязательно вам ответим!</h2>
