@@ -29,7 +29,6 @@
                     <form method="post" action="https://echo.htmlacademy.ru">
                         <input id="search-field" type="search" name="search" placeholder="Что ищем?">
                         <label class="invisible" for="search-field">Что ищем?</label>
-                        <!--Нужна ли здесь кнопка отправки?-->
                     </form>
                 </div>
                 
@@ -42,18 +41,19 @@
                             <form method="post" action="https://echo.htmlacademy.ru">
                                 <p>
                                     <label class="invisiblen" for="email-field">Электронная почта</label>
-                                    <input id="email-field" type="email" name="email" placeholder="Электронная почта">
+                                    <input id="email-field" type="email" name="email" placeholder="Электронная почта" required> 
                                 </p>
                                 <p>
                                     <label class="invisible" for="password-field">Пароль</label>
-                                    <input id="password-field" type="password" name="password" placeholder="Пароль">
+                                    <input id="password-field" type="password" name="password" placeholder="Пароль" required>
                                 </p>
                                 <button class="btn" type="submit">Войти</button>
+                                <p class="reg-links">
+                                    <a href="#">Забыли пароль?</a>
+                                    <a href="#">Новая регистрация</a>
+                                </p>
                             </form>
-                            <p class="login-links">
-                                <a href="#">Забыли пароль?</a>
-                                <a href="#">Новая регистрация</a>
-                            </p>
+                            
                         </li>
                     </ul>
                 </div>

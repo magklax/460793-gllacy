@@ -30,7 +30,6 @@
                     <form method="post" action="https://echo.htmlacademy.ru">
                         <input id="search-field" type="search" name="search" placeholder="Что ищем?">
                         <label class="invisible" for="search-field">Что ищем?</label>
-                        <!--Нужна ли здесь кнопка отправки?-->
                     </form>
                 </div>
                 
@@ -42,54 +41,45 @@
                             </a>
                             <form method="post" action="https://echo.htmlacademy.ru">
                                 <p>
-                                    <label class="invisible" for="email-field">Электронная почта</label>
-                                    <input id="email-field" type="email" name="email" placeholder="Электронная почта">
+                                    <label class="invisiblen" for="email-field">Электронная почта</label>
+                                    <input id="email-field" type="email" name="email" placeholder="Электронная почта" required> 
                                 </p>
                                 <p>
                                     <label class="invisible" for="password-field">Пароль</label>
-                                    <input id="password-field" type="password" name="password" placeholder="Пароль">
+                                    <input id="password-field" type="password" name="password" placeholder="Пароль" required>
                                 </p>
-                                <button class="btn" type="submit">Войти</button>
+                                <button class="btn login-btn" type="submit">Войти</button>
+                                <p class="reg-links">
+                                    <a href="#">Забыли пароль?</a>
+                                    <a href="#">Новая регистрация</a>
+                                </p>
                             </form>
-                            <p class="login-links">
-                                <a href="#">Забыли пароль?</a>
-                                <a href="#">Новая регистрация</a>
-                            </p>
                         </li>
                     </ul>
                 </div>
+                            
                 <div class="cart">
                     <a class="btn cart-btn" href="#">
                         <img src="img/cart2.svg" width="21" height="20" alt="Корзина с товарами">2 товара
                     </a>
                     <table class="modal modal-cart-table">
-                <tr>
-                    <td>
-                        <span class="delete"><img src="img/x-big.svg" width="11" height="11" alt="Удалить товар"></span>
-                    </td>
-                    <td>
-                        <a href="#"><img src="img/morozko-tiny-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></a>
-                    </td>
-                    <td>
-                        <a href="#">Пломбир с апельсиновым джемом</a></td>
-                    <td>1,5 кг x <span class="paletext">200 руб</span></td>
-                    <td>300 руб</td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="delete"><img src="img/x.svg" width="11" height="11" alt="Удалить товар"></span>
-                    </td>
-                    <td>
-                        <a href="#"><img src="img/morozko-tiny-2.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></a>
-                    </td>
-                    <td>
-                        <a href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
-                    <td>1,5 кг x <span class="paletext">300 руб</span></td>
-                    <td>450 руб</td>
-                </tr>
-            </table>
-                <p class="cart-total-price"><b>Итого: 750 рублей</b></p>
-                <p><a class="btn cart-btn">Оформить заказ</a></p>    
+                        <tr>
+                            <td><span class="delete"><img src="img/x-big.svg" width="11" height="11" alt="Удалить товар"></span></td>
+                            <td><a href="#"><img src="img/morozko-tiny-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></a></td>
+                            <td><a href="#">Пломбир с апельсиновым джемом</a></td>
+                            <td>1,5 кг x <span class="paletext">200 руб</span></td>
+                            <td>300 руб</td>
+                        </tr>
+                        <tr>
+                            <td><span class="delete"><img src="img/x.svg" width="11" height="11" alt="Удалить товар"></span></td>
+                            <td><a href="#"><img src="img/morozko-tiny-2.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></a></td>
+                            <td><a href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
+                            <td>1,5 кг x <span class="paletext">300 руб</span></td>
+                            <td>450 руб</td>
+                        </tr>
+                    </table>
+                    <p class="cart-total-price"><b>Итого: 750 рублей</b></p>
+                    <p><a class="btn cart-btn">Оформить заказ</a></p>    
                 </div>
             </nav>
             <div class="customer-info">
@@ -101,7 +91,7 @@
         <main class="container">
             <ul class="breadcrumbs">
                 <li><a href="index.html">Главная</a></li>
-                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="#">Каталог</a></li>
                 <li><a>Сливочное</a></li>
             </ul>
             <h1 class="page-title">Сливочное мороженое</h1> 
@@ -122,10 +112,11 @@
                     </fieldset>
                     
                     <fieldset class="filter-category">
-                        <legend>Цена: 100 руб. - 500 руб.</legend>
-                        <label for="price-range" class="invisible">Цена: 100 руб. - 500 руб.</label>
-                        <input type="range" min="100" max="500" step="100" id="price-range">
-                        <!--Как правильно сделать двойной ползунок?-->
+                        <p>Цена: 100 руб. - 500 руб.</p>
+                        <span>
+                            <img src="img/filter-button.svg" width="20" height="23" alt="Кнопка фильтра">
+                            <img src="img/filter-button.svg" width="20" height="23" alt="Кнопка фильтра">
+                        </span>
                     </fieldset>          
                     
                     <fieldset class="filter-category">
@@ -163,7 +154,7 @@
                             </li>
                             <li class="filter-option">
                                 <input class="visually-hidden filter-checkbox" type="checkbox" id="filter-fruit" name="fruit">
-                                <label for="filter-sugar">фрукты</label>
+                                <label for="filter-fruit">фрукты</label>
                             </li>
                             <li class="filter-option">
                                 <input class="visually-hidden filter-checkbox" type="checkbox" id="filter-syrup" name="syrup">
@@ -175,7 +166,7 @@
                             </li>
                         </ul>
                     </fieldset> 
-                      
+                    <button type="submit" class="btn filter-btn">Применить</button> 
                 </form>
             </section>
                 
