@@ -16,10 +16,10 @@
                     <li class="site-nav-item"><a href="#">Каталог</a>
                         <ul class="dropdown main-dropdown">
                             <li class="dropdown-item special"><a href="#">Новинки</a></li>
-                            <li class="dropdown-item"><a href="catalog-item.html">Сливочное</a></li>
-                            <li class="dropdown-item dropdown-item-current"><a href="#">Щербеты</a></li>
-                            <li class="dropdown-item"><a href="#">Фруктовый лед</a></li>
-                            <li class="dropdown-item"><a href="#">Мелорин</a></li>
+                            <li><a href="catalog-item.html">Сливочное</a></li>
+                            <li class="dropdown-item-current"><a href="#">Щербеты</a></li>
+                            <li><a href="#">Фруктовый лед</a></li>
+                            <li><a href="#">Мелорин</a></li>
                        </ul>
                     </li>
                     <li class="site-nav-item"><a href="#">Доставка и оплата</a></li>
@@ -49,7 +49,7 @@
                                     <label class="invisible" for="password-field">Пароль</label>
                                     <input class="field" id="password-field" type="password" name="password" placeholder="Пароль" required>
                                 </p>
-                                <button class="btn login-btn" type="submit">Войти</button>
+                                <button class="btn login-btn" type="submit" value="Войти">Войти</button>
                                 <p class="reg-links">
                                     <a href="#">Забыли пароль?</a>
                                     <a href="#">Новая регистрация</a>
@@ -60,11 +60,11 @@
                 </div>
                 
                 <div class="cart">
-                    <a class="cart-btn" href="#">Пусто</a>
+                    <a href="#">Пусто</a>
                 </div>
             </nav>
             <div class="customer-info">
-                <p class="schedule">С 10 до 20 ежедневно</p>
+                <p class="schedule">С 10 до 20, ежедневно</p>
                 <p class="phone-number">8 812 450 25 25</p>
             </div>
         </header>
@@ -118,22 +118,24 @@
                     <li class="bestseller-item">
                         <div class="bestseller-item-wrapper">
                             <a href="#">
-                                <h3 class="bestseller-item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-                                <img class="bestseller-img" src="img/hit.svg" width="61" height="61" alt="Хит"> 
-                                <img class="bestseller-photo" src="img/1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-                            </a>`
-                            <p class="bestseller-item-price">310<img src="img/ruble.svg" width="31" height="36" alt="Р"><span>/кг</span></p>
+                                <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+                                <div class="bestseller-img-wrapper">
+                                    <img class="bestseller-photo" src="img/1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                                </div>
+                            </a>
+                            <p class="bestseller-item-price">310 ₽<span>/кг</span></p>
                             <a href="#" class="btn bestseller-btn">Быстрый просмотр</a>
                         </div>
                     </li>
                     <li class="bestseller-item">
                         <div class="bestseller-item-wrapper">
                             <a href="#">
-                                <h3 class="bestseller-item-title">Сливочно-кофейное с кусочками шоколада</h3>
-                                <img class="bestseller-img" src="img/hit.svg" width="61" height="61" alt="Хит"> 
-                                <img class="bestseller-photo" src="img/2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+                                <h3>Сливочно-кофейное с кусочками шоколада</h3>
+                                <div class="bestseller-img-wrapper">
+                                    <img class="bestseller-photo" src="img/2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+                                </div>
                             </a>
-                            <p class="bestseller-item-price">380<img src="img/ruble.svg" width="31" height="36" alt="Р"><span>/кг</span></p>
+                            <p class="bestseller-item-price">380 ₽<span>/кг</span></p>
                             <a href="#" class="btn bestseller-btn">Быстрый просмотр</a>
                         </div>
                     </li>
@@ -141,10 +143,11 @@
                         <div class="bestseller-item-wrapper">
                             <a href="#">
                                 <h3 class="bestseller-item-title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
-                                <img class="bestseller-img" src="img/hit.svg" width="61" height="61" alt="Хит"> 
-                                <img class="bestseller-photo" src="img/3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                                <div class="bestseller-img-wrapper">
+                                    <img class="bestseller-photo" src="img/3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                                </div>
                             </a>
-                            <p class="bestseller-item-price">355<img src="img/ruble.svg" width="31" height="36" alt="Р"><span>/кг</span></p>
+                            <p class="bestseller-item-price">355 ₽<span>/кг</span></p>
                             <a href="#" class="btn bestseller-btn">Быстрый просмотр</a>
                         </div>
                     </li>
@@ -152,10 +155,11 @@
                         <div class="bestseller-item-wrapper">
                             <a href="#">
                                 <h3 class="bestseller-item-title">Сливочное крем-брюле с карамельной подливкой</h3>
-                                <img class="bestseller-img" src="img/hit.svg" width="61" height="61" alt="Хит"> 
-                                <img class="bestseller-photo" src="img/4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+                                <div class="bestseller-img-wrapper">
+                                    <img class="bestseller-photo" src="img/4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+                                </div>
                             </a>
-                            <p class="bestseller-item-price">415<img src="img/ruble.svg" width="31" height="36" alt="Р"><span>/кг</span></p>
+                            <p class="bestseller-item-price">415 ₽<span>/кг</span></p>
                             <a href="#" class="btn bestseller-btn">Быстрый просмотр</a>
                         </div>
                     </li>
@@ -184,7 +188,7 @@
                 </ul>
             </section>
             <article class="blog-preview">
-                <h2 class="blog-title">Новое в нашем блоге</h2>
+                <h2>Новое в нашем блоге</h2>
                 <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
             </article>
             
@@ -201,7 +205,6 @@
             <section class="map">
                 <div class="container">
                     <h2 class="invisible">Карта проезда</h2>
-                    <img class="bestseller-photo" src="img/map.jpg" width="1200" height="430" alt="Карта проезда">
                     <img src="img/pin.svg" width="80" height="140" alt="Пин">
                     <div class="map-text-block">
                         <p class="map-text">
