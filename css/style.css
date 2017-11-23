@@ -9,7 +9,7 @@ body {
     color: #ffffff;
     
     background-color: #849d8f;
-    background-image: url("img/morozki1.png");
+    background-image: url("/img/morozki1.png");
     background-position: top center;
     background-repeat: no-repeat;
 }
@@ -198,13 +198,13 @@ a {
 
 .promotion-block-left {
     background-color: #be3256;
-    background-image: url("img/ras-background.jpg");
+    background-image: url("/img/ras-background.jpg");
     background-position: 0 0;
     background-repeat: no-repeat;
 }
 .promotion-block-right {
     background-color: #451700;
-    background-image: url("img/choko-background.jpg");
+    background-image: url("/img/choko-background.jpg");
     background-position: 0 0;
     background-repeat: no-repeat;
 }
@@ -237,7 +237,7 @@ a {
     position: absolute;
     width: 61px;
     height: 61px;
-    background-image: url("img/hit.svg");
+    background-image: url("/img/hit.svg");
 }
 
 .bestseller-item a:hover,
@@ -275,7 +275,7 @@ a {
     color: #323232;
     
     background-color: #ecdfc4;
-    background-image: url("img/waffle-background.jpg");
+    background-image: url("/img/waffle-background.jpg");
     background-position: 0 0;
     background-repeat: repeat;
 }
@@ -292,7 +292,7 @@ a {
     color: #323232;
     
     background-color: #ffffff;
-    background-image: url("img/straw-background.jpg");
+    background-image: url("/img/straw-background.jpg");
     background-position: 100% 0;
     background-repeat: no-repeat;
 }
@@ -319,7 +319,7 @@ a {
     color: #5a5a5a;
     
     background-color: #f8f7f4;
-    background-image: url("img/post-background.svg");
+    background-image: url("/img/post-background.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
 }
@@ -333,7 +333,7 @@ a {
 /*Карта*/
 
 .map .container {
-    background-image: url("img/map.jpg");
+    background-image: url("/img/map.jpg");
     background-color: #ffffff;
     background-position: 50% 0;
     background-repeat: no-repeat;
@@ -708,14 +708,25 @@ a {
 /*Преимущества*/
 
 .features {
+    margin: 0;    
     margin-bottom: 40px;
+    padding: 0;
 }
 
 .features-list {
+    display: flex;
+    height: 215px;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
     margin: 0;
-    padding: 0;
-    
+    padding: 0 18px 0;
     list-style: none;
+}
+
+.features-list li {
+    width: 542px;
+    min-height: 89px;
 }
 
 /*Блог-Подписка*/
@@ -779,6 +790,17 @@ a {
     margin: 0;
     padding: 0
 }
+
+.modal-feedback {
+    display: none;
+    width: 478px;
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 /*Карточка товара*/
 
