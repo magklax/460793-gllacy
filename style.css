@@ -23,10 +23,6 @@ a {
     text-decoration: none;
 }
 
-li {
-    list-style: none;
-}
-
 .field { /*общие параметры форм*/
     font-size: 14px;
     line-height: 24px;
@@ -75,8 +71,6 @@ li {
 
 .main-nav { /*фон и шрифт*/
     color: #ffffff;
-    
-    background-color: #849d8f;
 }
 
 .main-nav a {
@@ -149,7 +143,6 @@ li {
     background-color: #f8f7f4;
 }
 
-.search form, 
 .user-block form {
     background-color: #f8f7f4;
     box-shadow: 0 20px 20px rgba(0,0,0,0.4);
@@ -245,7 +238,6 @@ li {
     width: 61px;
     height: 61px;
     background-image: url("img/hit.svg");
-    
 }
 
 .bestseller-item a:hover,
@@ -341,10 +333,10 @@ li {
 /*Карта*/
 
 .map .container {
-    background-image: url(" img/map.jpg");
+    background-image: url("img/map.jpg");
     background-color: #ffffff;
-    background-position: 0 0;
-    background-repeat: repeat;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
 }
 
 .map-text-block {
@@ -363,10 +355,6 @@ li {
     line-height: 24px;
 }
 /*Карта-Конец*/
-
-
-
-
 
 /**********************Карточка товара**********************/
 
@@ -404,7 +392,6 @@ li {
 .cart-total-price {
     font-size: 15px;
     line-height: 18px;
-    
 }
 
 /*Хлебные крошки*/
@@ -423,7 +410,7 @@ li {
     text-decoration: underline;
 }
 
-/*Хлебные крошки - Конец*//*Хлебные крошки - Конец*/
+/*Хлебные крошки - Конец*/
 
 
 .page-title {
@@ -552,16 +539,6 @@ li {
 
 /*Каталог-Конец*/
 
-
-
-
-
-
-
-
-
-
-
 /*Футер*/
 .main-footer { /*фон и шрифт*/
     color: #ffffff;
@@ -625,3 +602,295 @@ li {
 .modal-feedback textarea {
     font-size: 16px;   
 }
+
+/********************************Сеточные стили********************************/
+/*Шапка*/
+.main-header {
+    margin-bottom: 275px;
+    padding-top: 9px;
+}
+
+.container {
+    width: 1146px;
+    margin: 0 auto;
+    padding: 0 27px;
+}
+
+.main-nav.container {
+    display: flex;
+    justify-content: space-between;    
+}
+
+.main-logo {
+    width: 154px;
+    height: 64px;
+    margin: 0;
+    padding: 0;    
+}
+
+.site-nav {
+    width: 406px;
+    margin: 0;
+    padding: 0;  
+    
+    list-style: none;
+}
+
+.main-dropdown {
+    margin: 0;
+    padding: 0;  
+    
+    list-style: none;
+}
+
+.user-block {
+    width: 267px;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+}
+
+.user-nav {
+    list-style: none;
+}
+
+.customer-info {
+    width: 166px;
+    margin: 0;
+    margin-left: auto;
+}
+
+/*Слайдер*/
+
+.slider-control-list {
+    margin: 0;
+    padding: 0;
+    
+    list-style: none;
+}
+
+/*Акции*/
+
+.index-columns {
+    border: 2px solid blue;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+.promotion-block {
+    width: 560px;
+    border: 2px solid blue;
+}
+
+/*Хиты*/
+
+.bestseller-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    
+    list-style: none;
+}
+
+.bestsellers {
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+.bestseller-item-wrapper {
+    width: 267px;
+}
+
+/*Преимущества*/
+
+.features {
+    margin-bottom: 40px;
+}
+
+.features-list {
+    margin: 0;
+    padding: 0;
+    
+    list-style: none;
+}
+
+/*Блог-Подписка*/
+
+.blog-preview {
+    width: 560px;
+}
+
+.subscribe {
+    width: 560px;
+}
+
+/*Карта*/
+
+.map {
+    width: 100%;    
+}
+
+.map .container {
+    display: flex;
+    justify-content: flex-end;
+    height: 430px;
+}
+
+.map-text-block {
+    width: 302px;
+    padding: 30px 25px;   
+    margin-bottom: auto;
+}
+
+/*Футер*/
+
+.main-footer {
+    margin: 0;
+    margin-top: 19px;
+    padding: 0;
+}
+
+.main-footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-social {
+    width: 213px;
+    margin: 0;
+    padding: 0;
+    
+    list-style: none;
+}
+
+.supplier-info {
+    width: 327px;
+    margin: 0;
+    padding: 0;
+    
+    list-style: none;
+}
+.footer-copyright {
+    width: 190px;
+    margin: 0;
+    padding: 0
+}
+
+/*Карточка товара*/
+
+.inner-page .main-header {
+    margin-bottom: 28px;
+    padding-top: 9px;
+}
+
+
+.cart-full {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.table-box {
+    width: 540px;
+    margin-right: 0;
+    
+}
+
+.breadcrumbs {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+    
+    list-style: none;
+}
+
+.page-title {
+    
+    margin: 0;      
+    padding: 0;
+}
+.filters {
+    margin-bottom: 25px;
+}
+
+.filters-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.filter-category {
+    margin: 0;
+    padding: 0; 
+}
+ 
+.filter-category:first-of-type {
+    width: 194px;
+}
+
+.filter-category:nth-of-type(2) {
+    width: 220px;
+}
+
+.filter-category:nth-of-type(3) {
+    width: 415px;
+}
+
+.filter-category:last-of-type {
+    width: 703px;
+}
+
+.filter-box {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 25;
+    
+    list-style: none;
+}
+
+.catalog {
+    margin: 0;
+    padding: 0;
+}
+
+.catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    
+    list-style: none;
+}
+
+.catalog-item {
+    width: 286.5px;
+    margin: 0;
+    padding: 0;   
+}    
+
+.pagination-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 190px;
+    margin: 30px 0 35px auto;
+    
+    padding: 0; 
+    
+    list-style: none;
+    
+    
+}
+  
+    
