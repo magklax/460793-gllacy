@@ -42,6 +42,7 @@ a {
 }
 
 .field {
+    padding-left: 14px;
     font-size: 14px;
     line-height: 24px;
     color: #999999;
@@ -59,13 +60,14 @@ a {
 
 .btn {
     display: inline-block;
-    padding: 11px 21px;
+    padding: 10px 22px;
     
     color: #fefefe;
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
 
+    white-space: nowrap;
     text-align: center;
     vertical-align: middle;
     
@@ -117,7 +119,7 @@ input[type="radio"].invisible {
 
 /*Шапка*/
 .main-header {
-    margin-bottom: 275px;
+    margin-bottom: 274px;
     padding-top: 9px;
     color: #ffffff;
 }
@@ -455,12 +457,17 @@ input[type="radio"].invisible {
     display: flex;
     justify-content: space-between;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     padding: 0;
 }
 
 .promotion-block {
+    position: relative;
+    
     width: 560px;
+    min-height: 230px;
+    
+    border-radius: 19px;
 }
 
 .promotion-block-left {
@@ -475,13 +482,25 @@ input[type="radio"].invisible {
     background-position: 0 0;
     background-repeat: no-repeat;
 }
+
 .promotions h3 {
+    margin: 0;
+    padding: 16px 18px;
+    
     font-size: 35px;
     line-height: 41px;
 }
 .promotions p {
+    margin: 0;
+    padding: 0 30px 0 19px;
     font-size: 18px;
     font-weight: 700;
+}
+
+.promotion-btn {
+    position: absolute;
+    right: 22px;
+    bottom: 25px;
 }
 
 /*Акции-Конец*/
@@ -489,9 +508,7 @@ input[type="radio"].invisible {
 /*Хиты продаж*/
 
 .bestsellers {
-    margin: 0;
     margin-bottom: 40px;
-    padding: 0;
 }
 
 .bestseller-list {
@@ -505,38 +522,51 @@ input[type="radio"].invisible {
 }
 
 .bestseller-item h3 {
+    order: 1;
+    margin: 10px;    
+        
     font-size: 16px;    
     text-align: center;
     font-weight: 500;
 }
 
-.bestseller-item-wrapper {
+.bestseller-item {
     width: 267px;
+    height: 405px;
+    position: relative;
 }
-    
+
 .bestseller-img-wrapper::before {
     content: "";
+    
     position: absolute;
+    top: 10px;
     width: 61px;
     height: 61px;
     background-image: url("/img/hit.svg");
 }
 
-.bestseller-item a {
-    text-decoration: underline;
+.bestseller-photo {
+    
+    margin-top: 7px;
+    border-radius: 50%;
+}
+
+.bestseller-item a:not(.btn) {
+    display: flex;
+    flex-direction: column;
+    text-decoration: underline; /* как сделать подчеркивание?*/
+    align-items: center;
     color: #ffffff;
 }
 
-.bestseller-item a:hover,
-.bestseller-item a:focus,
-.bestseller-item a:active,
-.blog-preview a:hover,
-.blog-preview a:focus,
-.blog-preview a:active {
-    color: #ffbc9e;
-}
 
 .bestseller-item-price {
+    position: absolute;
+    
+    margin: 0;
+    top: 218px;       
+        
     font-size: 45px;
     line-height: 45px;
     font-weight: 700;
@@ -547,21 +577,53 @@ input[type="radio"].invisible {
     font-size: 30px;
 }
 
-.bestseller-item-wrapper:hover {
+
+.bestseller-item .bestseller-btn {
+    display: none;
+    
+    position: absolute;
+    left: 50%;
+    margin-bottom: 22px;
+    
+    transform: translate(-50%);
+}
+
+/*фон накладывается на картинку, как поместить его на задний фон? через z-index не получилось*/
+
+.bestseller-item:hover::after { 
+    content: "";
+      
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -13px;
+    width: 293px;
+    height: 405px;
     background-color: rgba(255,255,255,0.2);
+    border-radius: 10px;
     box-shadow: 
         0 20px 20px rgba(0,0,0,0.4)
         inset 0 3px 7px rgba(0,0,0,0.35);
+    
+    cursor: pointer;
 }
+
+.bestseller-item:hover .bestseller-btn {
+    display: inline-block;    
+}
+
 
 /*Хиты продаж-Конец*/
 
 /*Преимущества*/
 
 .features {
-    margin: 0;    
+    margin: 0;   
+    margin-top: -75px;
     margin-bottom: 40px;
     padding: 0;
+    padding-left: 20px;
+    padding-right: 35px;
     
     color: #323232;
     
@@ -569,50 +631,135 @@ input[type="radio"].invisible {
     background-image: url("/img/waffle-background.jpg");
     background-position: 0 0;
     background-repeat: repeat;
+    border-radius: 15px;
 }
 
 .features h2 {
     line-height: 30px;
     font-weight: 500;
+    padding-top: 26px;
+    
 }
 
 .features-list {
+    position: relative;
+    
     display: flex;
-    height: 215px;
+    height: 200px;
     flex-direction: column;
-    align-items: center;
     flex-wrap: wrap;
     margin: 0;
-    padding: 0 18px 0;
+    padding: 0;
+    
     list-style: none;
 }
 
 .features-list li {
-    width: 542px;
-    min-height: 89px;
+    display: inline-block;
+    margin-right: 30px;
+    
+    padding-left: 56px;
+    width: 480px;
+    min-height: 90px;
 }
 
+.features-list li:first-child::before {
+    content: "";
+    
+    position: absolute;
+    top: -13px;
+    left: 0;  
+    
+    width: 49px;
+    height: 49px;
+    
+     
+    background-color: transparent;
+    background-image: url("/img/icecream.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.features-list li:nth-child(2)::before {
+    content: "";
+    
+    position: absolute;
+    top: 75px;
+    left: 0;  
+    
+    width: 49px;
+    height: 49px;
+    
+     
+    background-color: transparent;
+    background-image: url("/img/leaf.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.features-list li:nth-child(3)::before {
+    content: "";
+    
+    position: absolute;
+    top: -13px;
+    right: 476px;  
+    
+    width: 49px;
+    height: 49px;
+    
+     
+    background-color: transparent;
+    background-image: url("/img/cow.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.features-list li:last-child::before {
+    content: "";
+    
+    position: absolute;
+    top: 75px;
+    right: 476px;  
+    
+    width: 49px;
+    height: 49px;
+    
+     
+    background-color: transparent;
+    background-image: url("/img/thermometer.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
 /*Преимущества-Конец*/
 
 /*Блог*/
 
 .blog-preview {
-    width: 560px;
+    width: 280px;
+    min-height: 170px;
+        
+    padding: 25px 260px 25px 20px;
     
+    /*Здесь буквы наежают на клубничку фона. не знаю как решить проблему, не используя br*/
     color: #323232;
     
     background-color: #ffffff;
     background-image: url("/img/straw-background.jpg");
     background-position: 100% 0;
     background-repeat: no-repeat;
+    border-radius: 15px;
 }
 
 .blog-preview h2 {
     font-size: inherit;
     font-weight: 500;
+    
+    margin: 0;
+    margin-bottom: 5px;
 }
 
 .blog-preview a {
+    padding-top: 10px;
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
@@ -626,7 +773,10 @@ input[type="radio"].invisible {
 /*Подписка*/
 
 .subscribe {
-    width: 560px;
+    width: 550px;
+    min-height: 210px;
+    
+    padding: 5px;
     
     color: #5a5a5a;
     
@@ -634,20 +784,57 @@ input[type="radio"].invisible {
     background-image: url("/img/post-background.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+.subscribe-wrapper {
+    position: relative;
+    min-height: 150px;
+    
+    
+    background-color: #f8f7f4;
+    border-radius: 15px;
+    
+    padding: 30px 20px;
+}
+
+.subscribe-wrapper p {
+    margin: 0;
+    
 }
 
 .subscribe [type="email"] {
+    width: 352px;
+    height: 40px;
+    
     font-size: 16px;
+}
+
+.subscribe-wrapper .subscribe-form {
+    position: absolute;
+    bottom: 35px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 510px;
+}
+
+.subscribe-wrapper .subscribe-btn {
+    padding: 10px 16px;
 }
 
 /*Подписка-Конец*/
 
 /*Карта*/
 .map {
+    margin-top: 40px;
     width: 100%;    
 }
 
 .map .container {
+    position: relative;
+    
     display: flex;
     justify-content: flex-end;
     height: 430px;
@@ -659,23 +846,51 @@ input[type="radio"].invisible {
 }
 
 .map-text-block {
-    width: 302px;
-    padding: 30px 25px;   
-    margin-bottom: auto;
+    position: absolute;
+    top: 65px;
+    right: 25px;
+        
+    width: 252px;
+    padding: 26px 26px 29px;   
+    
     
     color: #323232;
-    
+    border-radius: 15px;
     background-color: #fefefe;
 }
-
 .map-text {
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+.map-text span {
+    display: inline-block;
+    
+   
     font-size: 14px;
     line-height: 20px;
 }
 
 .map-text b {
+    display: inline-block;
+    
     font-size: 18px;
     line-height: 24px;
+}
+
+.map-text:first-of-type span{
+    padding-right: 100px;    
+}
+
+.map-text:nth-of-type(2) b {
+    margin-top: 5px;
+}
+
+.map-text:nth-of-type(2) {
+    margin-bottom: 24px;
+}
+.map-text-block .feedback-btn {
+    display: block;  
 }
 
 /*Карта-Конец*/
@@ -957,61 +1172,90 @@ input[type="radio"].invisible {
 /*Футер*/
 
 .main-footer { 
-    margin: 0;
-    margin-top: 19px;
-    padding: 0;
-    
+    margin-top: 20px;
+     
     color: #ffffff;
-    
-    background-color: #849d8f;
 }
 
 .main-footer .container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer-social {
-    width: 213px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    width: 185px;
     margin: 0;
     padding: 0;
+    padding-top: 20px;
     
     list-style: none;
 }
 
-.social-btn img{
-    opacity: 0.8;
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 31px;
+    height: 31px;
+      
+    box-shadow: 
+        0 0 0 3px rgba(255,255,255,0.6),
+        inset 0 0 0 1px rgba(255,255,255,0.6);
+    
+    background-color: #c2cec7;
     border-radius: 50%;
-    box-shadow: 0 0 0 3px rgba(194,206,199,0.5);
+    opacity: 0.8;
 }
 
-.social-btn img:hover,
-.social-btn img:focus {
+
+.social-btn:hover,
+.social-btn:focus {
+    box-shadow: 
+        0 0 0 4px rgba(255,255,255,0.7), 
+        inset 0 0 0 1px rgba(255,255,255,0.6);
     opacity: 1;
-    border-radius: 50%;
-    box-shadow: 0 0 0 3px rgba(194,206,199,0.5);
 }
 
-.social-btn img:active {
+.social-btn:active {
     opacity: 0.8;
-    border-radius: 50%;
     box-shadow: 
         0 0 0 3px rgba(194,206,199,0.5),
         inset 0 2px 1px rgb(136,136,136);
 }
 
 .supplier-info {
-    width: 327px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    position: relative;
+    
+    height: 45px;
+    width: 305px;
     margin: 0;
     padding: 0;
+    padding-top: 10px;
+    padding-left: 20px;
+       
+    list-style: none;   
+}
+.supplier-info a {
+    display: inline-block;
     
-    list-style: none;
+    margin-right: 35px;
 }
 
 .supplier-info a,
 .footer-copyright a {
     font-size: 13px;
     line-height: 18px;
+    
     color: #ffffff;
     text-decoration: underline;
 }
@@ -1020,14 +1264,35 @@ input[type="radio"].invisible {
     font-weight: 700;
 }
 
+.supplier-info li:first-child::before {
+    content: "";
+    
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    
+    background-image: url("/img/heart.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
 .footer-copyright {
+    display: inline-block;
     margin: 0;
+    margin-bottom: 26px;
     padding: 0
-    width: 190px;
+    width: 200px;
 
     font-size: 12px;
     line-height: 16px;
 }
+
+.footer-copyright p {
+    margin: 0;
+}
+
 /*Футер-Конец*/
 
 /* Форма обратной связи*/
