@@ -69,7 +69,7 @@ a {
 
     white-space: nowrap;
     text-align: center;
-    vertical-align: middle;
+    vertical-align: top;
     
     text-shadow: 0 2px 5px rgba(160,32,11,.76);
     
@@ -126,10 +126,13 @@ input[type="radio"].invisible {
 
 .main-nav { 
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;   
+    position: relative;
 }
 
 .container {
+    position: relative;
+    
     width: 1146px;
     margin: 0 auto;
     padding: 0 27px;
@@ -157,6 +160,7 @@ input[type="radio"].invisible {
     margin-top: 14px;
     
     text-align: center;
+    vertical-align: top;
     color: #ffffff;
 }
 
@@ -278,6 +282,14 @@ input[type="radio"].invisible {
 .cart a:hover {
     
 }
+
+.cart-full a {
+    padding: 8px 17px 8px 42px;  
+}
+
+.inner-page .table-box {
+    display: none;
+}
 /***************************************************************************/
 
 .search a,
@@ -325,7 +337,8 @@ input[type="radio"].invisible {
 }
 /***************************************************************************/
 .customer-info {
-    margin-left: auto;
+    position: absolute;
+    right: 27px;
     padding: 0;
         
     font-size: 14px;
@@ -609,7 +622,8 @@ input[type="radio"].invisible {
 }
 
 .bestseller-item:hover .bestseller-btn {
-    display: inline-block;    
+    display: inline-block; 
+    vertical-align: top;
 }
 
 
@@ -866,6 +880,7 @@ input[type="radio"].invisible {
 .map-text span {
     display: inline-block;
     
+    vertical-align: top;
    
     font-size: 14px;
     line-height: 20px;
@@ -898,7 +913,7 @@ input[type="radio"].invisible {
 /**********************Карточка товара**********************/
 
 .inner-page .main-header {
-    margin-bottom: 28px;
+    margin-bottom: 26px;
     padding-top: 9px;
 }
 
@@ -977,6 +992,7 @@ input[type="radio"].invisible {
 .page-title {
     margin: 0;      
     padding: 0;
+    margin-bottom: 5px;
     
     font-size: 35px;
     line-height: 41px;
@@ -985,6 +1001,7 @@ input[type="radio"].invisible {
 /*Фильтры*/
 
 .filters {
+    width: 860px;
     margin-bottom: 25px;
 }
 
@@ -1003,31 +1020,18 @@ input[type="radio"].invisible {
     font-weight: 500;
 }
 
-.filter-category:first-of-type {
-    width: 194px;
-}
-
-.filter-category:nth-of-type(2) {
-    width: 220px;
-}
-
-.filter-category:nth-of-type(3) {
-    width: 415px;
-}
-
-.filter-category:last-of-type {
-    width: 703px;
-}
 
 .filters fieldset {
     border: none;
 }
 
-.filter-box {
+.filter-category legend {
+    padding: 18px 15px 5px;     
+}
+
+.filter-category .filter-box {
     margin: 0;
-    padding: 0;
-    margin-bottom: 25;
-    
+        
     list-style: none;
     color: #ffffff;
     font-size: 16px;
@@ -1035,7 +1039,180 @@ input[type="radio"].invisible {
     font-weight: 500;
     
     background-color: #9db1a5;
+    border-radius: 18px;
 }
+
+/*Сортировка*/
+
+.filter-category select {
+    height: 36px;
+    padding: 0 35px 0 15px;
+    
+    font-size: 16px;
+    line-height: 18px;
+    
+    background-image: url("/img/select-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 170px 50%;
+    
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/*Цена*/
+
+.filter-category .filter-box-price {
+    position: relative;
+    padding: 16px 18px;
+}
+
+.scale {
+    margin: 0;
+    width: 178px;
+    height: 4px;
+    background: rgba(255,255,255,.3);
+}
+
+.scale-middle {
+    margin: 0;
+    height: 4px;
+    margin-right: 60px;
+    margin-left: 30px;
+    background: #ffffff;
+}
+
+.scale::before {
+    content: "";
+    
+    position: absolute;
+    top: 50%;
+    left: 33px;
+    width: 22px;
+    height: 22px;
+    
+    background-color: #ffffff;
+    background-image: url("/img/filter-button.svg");
+    border-radius: 50%;
+    border: none;
+    transform: translateY(-50%);
+}
+  
+.scale::after {
+    content: "";
+    
+    position: absolute;
+    top: 50%;
+    right: 62px;
+    width: 22px;
+    height: 22px;
+    
+    background-color: #ffffff;
+    background-image: url("/img/filter-button.svg");
+    border-radius: 50%;
+    border: none;
+    transform: translateY(-50%);
+}    
+    
+/*Жирность*/
+
+.filter-category .filter-box-fat {
+    width: 385px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 36px;
+    
+    margin: 0;
+    padding: 0 18px 0 15px;
+}
+
+.filter-box li {
+    position: relative;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="radio"]+label::before {
+    content: "";
+    
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    left: 0;
+        
+    background-image: url(/img/radio-off.svg);    
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    transform: translateY(-50%);
+}
+
+input[type="radio"]:checked + label::after {
+    content: "";
+    
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    left: 0;
+        
+    background-image: url(/img/radio-on.svg);    
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    transform: translateY(-50%);
+}
+
+.filter-box label {
+    padding-left: 35px;
+}
+
+/*Наполнители*/
+
+.filter-category .filter-box-topping {
+    width: 670px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 36px;
+    
+    margin: 0;
+    padding: 0 18px 0 15px;
+}
+
+input[type="checkbox"]+label::before {
+    content: "";
+    
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    left: 0;
+        
+    background-image: url(/img/checkbox-off.svg);    
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    transform: translateY(-50%);
+}
+
+input[type="checkbox"]:checked + label::after {
+    content: "";
+    
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    left: 0;
+        
+    background-image: url(/img/checkbox-on.svg);    
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    transform: translateY(-50%);
+}
+
 
 .filter-category select:hover,
 .filter-category select:focus {
@@ -1050,16 +1227,20 @@ input[type="radio"].invisible {
 }
 
 .filter-btn {
+    display: block;
+    height: 36px;
+    margin-left: auto;
+    margin-top: auto;
+    padding: 0 30px;
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
-
     text-align: center;
     color: #ffffff;
-    vertical-align: middle;
-  
+     
     background-color: #9db1a5;
     border: 2px solid #ffffff;
+    border-radius: 18px;
 }
 .filter-btn:hover,
 .filter-btn:focus {
@@ -1245,10 +1426,13 @@ input[type="radio"].invisible {
        
     list-style: none;   
 }
+
 .supplier-info a {
     display: inline-block;
     
     margin-right: 35px;
+    
+    vertical-align: top;
 }
 
 .supplier-info a,
@@ -1284,6 +1468,8 @@ input[type="radio"].invisible {
     margin-bottom: 26px;
     padding: 0
     width: 200px;
+    
+    vertical-align: top;
 
     font-size: 12px;
     line-height: 16px;

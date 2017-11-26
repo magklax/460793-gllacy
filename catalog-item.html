@@ -28,21 +28,19 @@
                 
                 <div class="user-block">
                     <div class="search">
-                        <a class="search-btn" href="#">
-                            <img src="img/search.svg" width="17" height="17" alt="Поиск">
-                        </a>
-                        <form method="post" action="https://echo.htmlacademy.ru">
-                            <input class="field" id="search-field" type="search" name="search" placeholder="Что ищем?">
-                            <label class="invisible" for="search-field">Что ищем?</label>
-                        </form>
-                    </div>
+                            <a class="search-btn" href="#"></a>
+                            <form method="post" action="https://echo.htmlacademy.ru">
+                                <input class="field" id="search-field" type="search" name="search" placeholder="Что ищем?">
+                                <label class="invisible" for="search-field">Что ищем?</label>
+                            </form>
+                        </div>
                 
                     <ul class="user-nav">
                         <li class="login-link">
                             <a class="login-btn" href="#">Вход</a>
                             <form method="post" action="https://echo.htmlacademy.ru">
                                 <p>
-                                    <label class="invisiblen" for="email-field">Электронная почта</label>
+                                    <label class="invisible" for="email-field">Электронная почта</label>
                                     <input class="field" id="email-field" type="email" name="email" placeholder="Электронная почта" required> 
                                 </p>
                                 <p>
@@ -59,9 +57,7 @@
                     </ul>
                             
                     <div class="cart cart-full">
-                        <a href="#">
-                            <img src="img/cart2.svg" width="21" height="20" alt="Корзина с товарами">2 товара
-                        </a>
+                        <a href="#">2 товара</a>
                         <div class="table-box">
                             <table class="cart-table">
                             <tr>
@@ -126,56 +122,57 @@
                         </fieldset>
                     
                         <fieldset class="filter-category">
-                            <p>Цена: 100 руб. - 500 руб.</p>
-                            <span class="filter-box">
-                                <img src="img/filter-button.svg" width="20" height="23" alt="Кнопка фильтра">
-                                <img src="img/filter-button.svg" width="20" height="23" alt="Кнопка фильтра">
-                            </span>
+                            <legend>Цена: 100 руб. - 500 руб.</legend>
+                            <div class="filter-box filter-box-price">
+                                <div class="scale">
+                                    <div class="scale-middle"></div>
+                                </div>                                
+                            </div>
                         </fieldset>          
                     
                         <fieldset class="filter-category">
-                            <legend>Жирность</legend>
-                            <ul class="filter-box">
+                            <legend>Жирность:</legend>
+                            <ul class="filter-box filter-box-fat">
                                 <li>
-                                    <input class="filter-radio invisible" type="radio" id="zero" name="fat-content" value="0">
+                                    <input type="radio" id="zero" name="fat-content" value="0">
                                     <label for="zero">0%</label>
                                 </li>
                                 <li>
-                                    <input class="filter-radio invisible" type="radio" id="less-ten" name="fat-content" value="less 10" checked>
+                                    <input type="radio" id="less-ten" name="fat-content" value="less 10" checked>
                                     <label for="less-ten">до 10%</label>
                                 </li>
                                 <li>
-                                    <input class="filter-radio invisible" type="radio" id="less-thirty" name="fat-content" value="less 30">
+                                    <input type="radio" id="less-thirty" name="fat-content" value="less 30">
                                     <label for="less-thirty">до 30%</label>
                                 </li>
                                 <li>
-                                    <input class="filter-radio invisible" type="radio" id="more-thirty" name="fat-content" value="more 30">
+                                    <input type="radio" id="more-thirty" name="fat-content" value="more 30">
                                     <label for="more-thirty">выше 30%</label>
                                 </li>
                             </ul>
                         </fieldset>
                      
                         <fieldset class="filter-category">
-                            <legend>Наполнители</legend>
-                            <ul class="filter-box">
+                            <legend>Наполнители:</legend>
+                            <ul class="filter-box filter-box-topping">
                                 <li>
-                                    <input class="visually-hidden filter-checkbox" type="checkbox" id="filter-chocolate" name="chocolate" checked>
+                                    <input type="checkbox" id="filter-chocolate" name="chocolate" checked>
                                     <label for="filter-chocolate">шоколадные</label>
                                 </li>
                                 <li>
-                                    <input class="visually-hidden filter-checkbox" type="checkbox" id="filter-sugar" name="sugar" checked>
-                                    <label for="filter-sugar">сахарные посыпки</label>
+                                    <input type="checkbox" id="filter-sugar" name="sugar" checked>
+                                    <label for="filter-sugar">сахарные присыпки</label>
                                 </li>
                                 <li>
-                                    <input class="visually-hidden filter-checkbox" type="checkbox" id="filter-fruit" name="fruit">
+                                    <input type="checkbox" id="filter-fruit" name="fruit">
                                     <label for="filter-fruit">фрукты</label>
                                 </li>
                                 <li>
-                                <input class="visually-hidden filter-checkbox" type="checkbox" id="filter-syrup" name="syrup">
-                                <label for="filter-syrup">сиропы</label>
-                            </li>
+                                    <input type="checkbox" id="filter-syrup" name="syrup">
+                                    <label for="filter-syrup">сиропы</label>
+                                </li>
                                 <li>
-                                    <input class="visually-hidden filter-checkbox" type="checkbox" id="filter-jam" name="jam">
+                                    <input type="checkbox" id="filter-jam" name="jam">
                                     <label for="filter-jam">джемы</label>
                                 </li>
                             </ul>
@@ -334,28 +331,30 @@
             </section>
        </main>
        
-        <footer class="main-footer">
-            <div class="container">
-                <ul class="footer-social">
-                    <li><a class="social-btn"><img src="img/twitter.svg"     width="32" height="32" alt="Твиттер"></a></li>
-                    <li><a class="social-btn"><img src="img/insta.svg" width="32" height="32" alt="Инстаграм"></a></li>
-                    <li><a class="social-btn"><img src="img/fb.svg" width="32" height="32" alt="Фейсбук"></a></li>
-                    <li><a class="social-btn"><img src="img/vk.svg" width="32" height="32" alt="Вконтакте"></a></li>
-                </ul>
-                
-                <ul class="supplier-info">
-                        <li><a href="#"><img src="img/heart.svg" width="15" height="13" alt="Сердце">Для поставщиков</a></li>
-                        <li><a href="#">О производстве</a></li>
-                        <li><a href="#">Наши документы</a></li>
-                        <li><a href="#">Экологические стандарты</a></li>
-                </ul>
-                            
-                <p class="footer-copyright">
-                    <a href="https://htmlacademy.ru"><img src="img/logo-htmlacademy-small.svg" width="108" height="38" alt="HTML Academy"></a>
-                    Сделано в <a href="https://htmlacademy.ru">HTML Academy</a>© 2017
-                </p>
-            </div>
-        </footer>
+       <footer class="main-footer">
+                <div class="container">
+                    <ul class="footer-social">
+                        <li><a class="social-btn"><span class="invisible">Твиттер</span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#FFF" d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.944 12.809c-.251 6.516-3.463 10.832-10.992 10.702h-.486c-.447 0-4.543-.443-5.344-1.823 2.479.19 4.247-.406 5.12-1.136-1.048-.289-2.923-.461-3.251-2.848.384.104.618.221 1.299.113-1.307-.824-2.758-1.519-2.679-3.643.311.317 1.164.518 1.46.457-.768-.233-2.149-3.244-.974-4.781 1.984 1.79 4.075 3.482 7.804 3.643.227-2.214 1.24-3.699 3.168-4.325 1.84-.479 3.255.26 3.901 1.138.737-.224 1.453-.466 2.193-.685-.004.833-.569 1.463-.935 1.709.747.165 1.423-.475 1.423-.475-.184.963-1.094 1.725-1.707 1.954z"/></svg>                   
+                        </a></li>
+                        <li><a class="social-btn"><span class="invisible">Инстаграм</span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="#FFF"><path d="M20.916 16a4.938 4.938 0 1 1-9.877 0c0-.394.051-.773.138-1.14h-.897v6.838h11.396V14.86h-.897c.086.367.137.746.137 1.14z"/><path d="M15.978 18.659c1.466 0 2.659-1.193 2.659-2.659s-1.193-2.659-2.659-2.659c-1.466 0-2.659 1.193-2.659 2.659s1.192 2.659 2.659 2.659zM18.637 10.302h3.039v3.039h-3.039z"/><path d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.955 21.698a2.285 2.285 0 0 1-2.279 2.279H10.279A2.285 2.285 0 0 1 8 21.698V10.302a2.286 2.286 0 0 1 2.279-2.279h11.396a2.286 2.286 0 0 1 2.279 2.279v11.396z"/></g></svg></a></li>
+                        <li><a class="social-btn"><span class="invisible">Фейсбук</span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#FFF" d="M16 0C7.164 0 0 7.163 0 16s7.164 16 16 16c8.837 0 16-7.164 16-16S24.837 0 16 0zm4.062 9.455h-3.021v3.444h3.021v3.445h-3.021v8.61H14.02v-8.61H11v-3.445h3.021V9.455c0-1.902 1.353-3.445 3.021-3.445h3.021v3.445z"/></svg></a></li>
+                        <li><a class="social-btn"><span class="invisible">Вконтакте</span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="#FFF"><path d="M16.637 14.495c.402-.019.719-.082.951-.188.326-.145.54-.33.641-.559.101-.229.15-.496.15-.797 0-.232-.058-.465-.174-.697-.116-.232-.322-.405-.617-.517-.264-.1-.592-.155-.984-.165a76.242 76.242 0 0 0-1.652-.014h-.339v2.965h.565c.571 0 1.057-.009 1.459-.028zM18.118 17.084c-.282-.081-.672-.125-1.166-.132a127.97 127.97 0 0 0-1.55-.009h-.79v3.493h.264c1.014 0 1.74-.003 2.18-.009a3.2 3.2 0 0 0 1.212-.245c.377-.157.633-.364.774-.625s.214-.562.214-.9c0-.446-.088-.788-.261-1.03-.17-.241-.464-.423-.877-.543z"/><path d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm6.602 20.531a3.73 3.73 0 0 1-1.124 1.327c-.552.415-1.161.71-1.823.886s-1.501.264-2.519.264h-6.121V8.987h5.443c1.13 0 1.957.038 2.48.113a5.126 5.126 0 0 1 1.561.5c.533.27.929.632 1.189 1.087.26.455.392.975.392 1.558 0 .678-.179 1.278-.536 1.795-.358.518-.863.92-1.517 1.208v.075c.917.182 1.642.559 2.179 1.13.537.571.807 1.325.807 2.261 0 .678-.138 1.283-.411 1.817z"/></g></svg>
+                        </a></li>
+                    </ul>
+
+                    <ul class="supplier-info">
+                            <li><a href="#">Для поставщиков</a></li>
+                            <li><a href="#">О производстве</a></li>
+                            <li><a href="#">Наши документы</a></li>
+                            <li><a href="#">Экологические стандарты</a></li>
+                    </ul>
+
+                    <div class="footer-copyright">
+                        <a href="https://htmlacademy.ru"><img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy"></a>
+                    <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2017</p>
+                    </div>
+                </div>
+            </footer>
     </body>
 </html>   
      
