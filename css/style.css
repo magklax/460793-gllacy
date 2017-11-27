@@ -41,6 +41,11 @@ a {
     text-decoration: none;
 }
 
+a.disabled {
+    pointer-events: none; 
+    cursor: default; 
+}
+
 .field {
     padding-left: 14px;
     font-size: 14px;
@@ -92,6 +97,12 @@ a {
     box-shadow: inset 0 2px 2px rgb(148,39,24);
 }
 
+.btn.disabled,
+.btn:disabled {
+  cursor: default;
+  opacity: 0.4;
+ }
+
 img {
   max-width: 100%;
   height: auto;
@@ -119,7 +130,7 @@ input[type="radio"].invisible {
 
 /*Шапка*/
 .main-header {
-    margin-bottom: 274px;
+    margin-bottom: 320px;
     padding-top: 9px;
     color: #ffffff;
 }
@@ -155,16 +166,20 @@ input[type="radio"].invisible {
     list-style: none;
 }
 
-.main-nav a:not(.main-logo) { /*Всем ссылкам меню*/
+.site-nav a,
+.user-block a {
     display: inline-block;
+    position: relative;
     margin-top: 14px;
-    
+}
+
+.main-nav a {
     text-align: center;
     vertical-align: top;
     color: #ffffff;
 }
 
-.site-nav > li > a {
+.site-nav-item > a {
     padding: 6.5px 14px;
     
     font-size: 16px;
@@ -172,7 +187,7 @@ input[type="radio"].invisible {
     font-weight: 700;  
 }
 
-.site-nav > li > a::after {
+.site-nav-item > a::after {
     content: "";
     position: relative;
     display: block;
@@ -180,45 +195,82 @@ input[type="radio"].invisible {
     background-color: rgba(255,255,255,.2);
 }
 
-.site-nav > li > a:hover,
-.site-nav > li > a:focus {
+.site-nav-item > a:hover,
+.site-nav-item > a:focus {
     color: #333333;
     
     border-radius: 18px;
     background-color: #f7f6f3;
 }
 
-.site-nav > li > a:active {
+.site-nav-item > a:active {
     border-radius: 18px;
     background-color: #ededed;
     box-shadow: inset 0 2px 1px rgba(105, 105, 105, 0);
 }
 
+.site-nav-item:hover .main-dropdown {
+    display: block;
+}
+
 /***************************************************************************/
  
-.main-dropdown {
+ul.main-dropdown {
     display: none;
     position: absolute;
+    top: 50px;
     margin: 0;
+    margin-left: -7px;
+    
     padding: 0;
+    padding-bottom: 8px;
+    
+    width: 143px;
+    box-sizing: border-box;
     
     font: inherit;
-    color: #333333;
+    color: #323232;
     font-size: 14px;
-    font-weight: 400px;
+    font-weight: 400;
     line-height: 16px;
+    
     
     list-style: none;
     background-color: #f8f7f4;
     box-shadow: 0 20px 20px rgba(0,0,0,0.4);
+    border-radius: 5px;
+}
+.site-nav-item > a:hover ul.main-dropdown {
+    display: inline-block;
+}
+li.dropdown-item-special a {
+    position: relative;
+   
+    padding-top: 10px;
+    padding-bottom: 12px;
+    
+    font-weight: 700;
+}
+
+.dropdown-item-special a::after {
+    content: "";
+    position: absolute;
+    right: 9px;
+    bottom: 0;
+    left: 6px;
+    height: 1px;
+    background-color: rgba(53,53,53,.2);
 }
 
 .main-dropdown a {
     margin: 0;
-    padding: 0;
     display: block;
+    
+    padding: 8px 5px 8px 22px;
+    
+    text-align: left;
     font: inherit;
-    color: #333333;
+    color: #323232;
 }
 
 .main-dropdown a:hover {
@@ -228,12 +280,6 @@ input[type="radio"].invisible {
 .main-dropdown a:active {
     background-color: #f6b5a5;
 }
-
-.main-dropdown .special {
-    font-weight: bold;
-}
-
-/***************************************************************************/
 
 .user-block {
     display: flex;
@@ -262,6 +308,20 @@ input[type="radio"].invisible {
 .search a {
     width: 32px;
     height: 32px;    
+}
+
+.search a::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    
+    width: 17px;
+    height: 17px;
+    
+    background-image: url("/img/search.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 .user-nav a {
@@ -746,10 +806,10 @@ input[type="radio"].invisible {
 /*Блог*/
 
 .blog-preview {
-    width: 280px;
+    width: 290px;
     min-height: 170px;
         
-    padding: 25px 260px 25px 20px;
+    padding: 25px 250px 25px 20px;
     
     /*Здесь буквы наежают на клубничку фона. не знаю как решить проблему, не используя br*/
     color: #323232;
@@ -1273,7 +1333,7 @@ input[type="checkbox"]:checked + label::after {
     justify-content: space-between;
     margin: 0;
     padding: 0;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
         
     list-style: none;
 }
@@ -1363,7 +1423,7 @@ input[type="checkbox"]:checked + label::after {
     justify-content: space-between;
     
     width: 190px;
-    margin: 0 0 35px auto;
+    margin: 0 0 50px auto;
     padding: 0; 
     
     list-style: none;
@@ -1412,7 +1472,7 @@ input[type="checkbox"]:checked + label::after {
 .pagination-list a.back:active,
 .pagination-list a.next:hover,
 .pagination-list a.next:focus,
-.pagination-list a.next:active,{
+.pagination-list a.next:active {
     background-color: transparent;    
 }
 
@@ -1420,16 +1480,15 @@ input[type="checkbox"]:checked + label::after {
     opacity: 0.2;
 }
 
-.pagination-list li:first-child:hover {
-    background-color: transparent;
-}
+
 
 .pagination-list li:first-child {
     width: 25px;
     height: 25px;
-    background-image: url("/img/icon-right-small.svg");
+    
+    background-image: url("/img/next.svg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center right;
         
     transform: rotate(180deg);
 }
@@ -1437,9 +1496,10 @@ input[type="checkbox"]:checked + label::after {
 .pagination-list li:last-child {
     width: 25px;
     height: 25px;
-    background-image: url("/img/icon-right-small.svg");
+    
+    background-image: url("/img/next.svg");
     background-repeat: no-repeat;
-    background-position: center;    
+    background-position: center right; 
 }
 
 /*Каталог-Конец*/
@@ -1514,10 +1574,8 @@ input[type="checkbox"]:checked + label::after {
     height: 45px;
     width: 305px;
     margin: 0;
-    padding: 0;
-    padding-top: 10px;
-    padding-left: 20px;
-       
+    padding: 15px 0 0 20px;
+           
     list-style: none;   
 }
 
@@ -1560,8 +1618,9 @@ input[type="checkbox"]:checked + label::after {
     display: inline-block;
     margin: 0;
     margin-bottom: 26px;
-    padding: 0
-    width: 200px;
+    padding: 0;
+    
+    width: 196px;
     
     vertical-align: top;
 
@@ -1571,6 +1630,7 @@ input[type="checkbox"]:checked + label::after {
 
 .footer-copyright p {
     margin: 0;
+    
 }
 
 /*Футер-Конец*/
