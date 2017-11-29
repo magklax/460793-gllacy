@@ -4,7 +4,9 @@
 3) проверить тени на кнопка. нажатие
 4) подчеркивание ссылок в каталоге и бестселлере
 5) объединить каталог и бестселлер
-6) переделать сетку каталога
+6) переделать сетку каталога +
+7) слайдер должен быть без задержек
+8) малинки и шоколад - полоса
 
 */
 
@@ -20,6 +22,8 @@ body {
 }
 
 .site-wrapper {
+    min-width: 1200px;
+    
     background-color: #849d8f;
     background-image: url("/img/morozki1.png");
     background-position: top center;
@@ -42,6 +46,7 @@ body {
 .site-wrapper::after {
     background-image: url("img/slider-item3.png");
 }
+
 .inner-page {
     background: #849d8f;
 }
@@ -66,6 +71,7 @@ a.disabled {
         
     background-color: #ffffff;
     border: 1px solid rgba(178,178,178,0.52);
+    border-radius: 5px;
 }
 
 .field:hover {
@@ -371,7 +377,7 @@ li.dropdown-item-special a {
 
 .search .field {
     border-radius: 5px;
-    width: 100%;
+    min-width: 310px;
 }
 
 .search a {
@@ -517,7 +523,7 @@ li.dropdown-item-special a {
 .cart-table {
     font-size: 13px;
     line-height: 16px;
-    width: 100%;
+    width: 100%; /*Изменить шаирину!!!!!!!!!!!!!!!!!*/
     border-bottom: 1px solid #cacac7;
 }
 
@@ -597,31 +603,7 @@ li.dropdown-item-special a {
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /***************************************************************************/
-
 
 .customer-info {
     position: absolute;
@@ -650,9 +632,11 @@ li.dropdown-item-special a {
 .slider {
     position: relative;
     
+    margin-bottom: 40px;
+    padding-bottom: 70px;
+    
     text-align: center;
     color: #ffffff;
-    margin-bottom: 40px;
 }
 
 .slider-list {
@@ -664,12 +648,14 @@ li.dropdown-item-special a {
 
 .slide {
     display: none;
+    position: relative;
+    
 }
 
 .slide h3 {
     width: 703px;
     margin: 0 auto;
-    margin-bottom: 27px;
+    margin-bottom: 25px;
     
     font-size: 60px;
     line-height: 60px;
@@ -677,6 +663,11 @@ li.dropdown-item-special a {
 }
 
 .slide-btn {
+    position: absolute;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    
     padding: 12px 44px;
 
     font-size: 32px;
@@ -766,9 +757,13 @@ li.dropdown-item-special a {
 
 .promotion-block {
     position: relative;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
     
     width: 560px;
     min-height: 230px;
+    box-sizing: border-box;
     
     border-radius: 18px;
 }
@@ -777,33 +772,35 @@ li.dropdown-item-special a {
     background-color: #be3256;
     background-image: url("/img/ras-background.jpg");
     background-position: 0 0;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
+    background-size: cover;
 }
 .promotion-block-right {
     background-color: #451700;
     background-image: url("/img/choko-background.jpg");
     background-position: 0 0;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
+    background-size: cover;
 }
 
 .promotions h3 {
     margin: 0;
-    padding: 16px 18px;
+    padding: 16px 18px 14px;
     
     font-size: 35px;
     line-height: 41px;
 }
 .promotions p {
     margin: 0;
-    padding: 0 30px 0 19px;
+    padding: 0 30px 115px 19px;
     font-size: 18px;
     font-weight: 700;
 }
 
 .promotion-btn {
     position: absolute;
-    right: 22px;
     bottom: 25px;
+    right: 22px;
 }
 
 /*Акции-Конец*/
@@ -814,7 +811,22 @@ li.dropdown-item-special a {
     margin-bottom: 40px;
 }
 
-.bestseller-list {
+.bestsellers .catalog-item {
+    margin-top: 0;
+   
+}
+
+.bestseller .catalog-img-wrapper::before {
+    content: "";
+    
+    position: absolute;
+    top: 10px;
+    width: 61px;
+    height: 61px;
+    background-image: url("/img/hit.svg");
+}
+
+/*.bestseller-list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -823,7 +835,6 @@ li.dropdown-item-special a {
     
     list-style: none;
 }
-
 .bestseller-item {
     width: 267px;
     height: 405px;
@@ -834,10 +845,11 @@ li.dropdown-item-special a {
     display: flex;
     flex-direction: column;
     
-    text-decoration: underline; /* как сделать подчеркивание?*/
+    text-decoration: underline; 
     align-items: center;
     color: #ffffff;
 }
+
 
 .bestseller-item h3 {
     order: 1;
@@ -848,15 +860,7 @@ li.dropdown-item-special a {
     font-weight: 500;
 }
 
-.bestseller-img-wrapper::before {
-    content: "";
-    
-    position: absolute;
-    top: 10px;
-    width: 61px;
-    height: 61px;
-    background-image: url("/img/hit.svg");
-}
+
 
 .bestseller-photo {
     margin-top: 7px;
@@ -889,8 +893,7 @@ li.dropdown-item-special a {
     
     transform: translate(-50%);
 }
-
-/*фон накладывается на картинку, как поместить его на задний фон? через z-index не получилось*/
+*/
 
 .bestseller-item:hover::after { 
     content: "";
@@ -921,12 +924,12 @@ li.dropdown-item-special a {
 /*Преимущества*/
 
 .features {
+    width: 1146px;
+    box-sizing: border-box;
     margin: 0;   
     margin-top: -75px;
     margin-bottom: 40px;
-    padding: 0;
-    padding-left: 20px;
-    padding-right: 35px;
+    padding: 26px 0 26px 20px;
     
     color: #323232;
     
@@ -938,18 +941,15 @@ li.dropdown-item-special a {
 }
 
 .features h2 {
+    margin: 0;
+    
     line-height: 30px;
     font-weight: 500;
-    padding-top: 26px;
-    
 }
 
 .features-list {
-    position: relative;
-    
     display: flex;
-    height: 200px;
-    flex-direction: column;
+       
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
@@ -958,77 +958,49 @@ li.dropdown-item-special a {
 }
 
 .features-list li {
-    display: inline-block;
-    margin-right: 30px;
+    position: relative;
     
-    padding-left: 56px;
+    padding-top: 20px;
+    
+    padding-left: 57px;
+    padding-right: 26px;
     width: 480px;
-    min-height: 90px;
 }
 
-.features-list li:first-child::before {
-    content: "";
-    
-    position: absolute;
-    top: -13px;
-    left: 0;  
-    
-    width: 49px;
-    height: 49px;
-    
-    background-color: transparent;
-    background-image: url("/img/icecream.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-}
-
-.features-list li:nth-child(2)::before {
-    content: "";
-    
-    position: absolute;
-    top: 75px;
-    left: 0;  
-    
-    width: 49px;
-    height: 49px;
-    
-    background-color: transparent;
-    background-image: url("/img/leaf.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-}
-
-.features-list li:nth-child(3)::before {
-    content: "";
-    
-    position: absolute;
-    top: -13px;
-    right: 476px;  
-    
-    width: 49px;
-    height: 49px;
-    
-    background-color: transparent;
-    background-image: url("/img/cow.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-}
-
+.features-list li:first-child::before, 
+.features-list li:nth-child(2)::before, 
+.features-list li:nth-child(3)::before, 
 .features-list li:last-child::before {
     content: "";
     
     position: absolute;
-    top: 75px;
-    right: 476px;  
+    top: 10px;
+    left: 0;  
     
     width: 49px;
     height: 49px;
-         
+    
     background-color: transparent;
-    background-image: url("/img/thermometer.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
 }
+
+.features-list li:first-child::before {
+    background-image: url("/img/icecream.svg");
+}
+
+.features-list li:nth-child(2)::before {
+    background-image: url("/img/cow.svg");
+}
+
+.features-list li:nth-child(3)::before {
+    background-image: url("/img/leaf.svg");
+}
+
+.features-list li:last-child::before {
+    background-image: url("/img/thermometer.svg");
+}
+
 /*Преимущества-Конец*/
 
 /*Блог*/
@@ -1041,13 +1013,12 @@ li.dropdown-item-special a {
         
     padding: 25px 250px 25px 20px;
     
-    /*Здесь буквы наежают на клубничку фона. не знаю как решить проблему, не используя br*/
     color: #323232;
     
     background-color: #ffffff;
     background-image: url("/img/straw-background.jpg");
     background-position: 100% 0;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     border-radius: 15px;
 }
 
@@ -1085,15 +1056,13 @@ li.dropdown-item-special a {
     background-color: #f8f7f4;
     background-image: url("/img/post-background.svg");
     background-position: 0 0;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     border-radius: 15px;
 }
 
 .subscribe-wrapper {
     position: relative;
-    min-height: 150px;
-    
-    
+        
     background-color: #f8f7f4;
     border-radius: 15px;
     
@@ -1105,21 +1074,19 @@ li.dropdown-item-special a {
     
 }
 
-.subscribe [type="email"] {
-    width: 352px;
-    height: 40px;
-    
-    font-size: 16px;
-}
-
 .subscribe-wrapper .subscribe-form {
-    position: absolute;
-    bottom: 35px;
-    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 510px;
+    
+    margin-top: 40px;  
+}
+
+.subscribe [type="email"] {
+    width: 368px;
+    height: 40px;
+    
+    font-size: 16px;
 }
 
 .subscribe-wrapper .subscribe-btn {
@@ -1132,7 +1099,6 @@ li.dropdown-item-special a {
 
 .map {
     margin-top: 40px;
-    width: 100%;  
     position: relative;
 }
 
@@ -1141,12 +1107,13 @@ li.dropdown-item-special a {
     
     display: flex;
     justify-content: flex-end;
-    height: 430px;
+    min-height: 430px;
     
     background-image: url("/img/map.jpg");
     background-color: #ffffff;
     background-position: 50% 0;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 .map .container::after {
     content: "";
@@ -1155,27 +1122,30 @@ li.dropdown-item-special a {
     z-index: 20;
     top: 140px;
     left: 265px;
+    
     width: 90px;
     height: 150px;
+    
     background-image: url("/img/pin.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
 }
 .map-text-block {
-    position: absolute;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     
-    top: 65px;
-    right: 25px;
+    margin: 63px 0 63px;
         
     width: 305px;
     box-sizing: border-box;
-    padding: 26px 26px 29px;   
-    
-    
+    padding: 26px 27px 0;   
+        
     color: #323232;
     border-radius: 15px;
     background-color: #fefefe;
 }
+
 .map-text {
     margin: 0;
     margin-bottom: 16px;
@@ -1198,18 +1168,20 @@ li.dropdown-item-special a {
 }
 
 .map-text:first-of-type span{
-    padding-right: 100px;    
+    padding-right: 100px;   
+    
+}
+.map-text b {
+    margin-top: 3px;
 }
 
-.map-text:nth-of-type(2) b {
-    margin-top: 5px;
-}
-
-.map-text:nth-of-type(2) {
-    margin-bottom: 24px;
+.map-text:last-of-type {
+    margin-bottom: 100px;
 }
 .map-text-block .feedback-btn {
-    display: block;  
+    position: absolute; 
+    bottom: 30px;
+    padding: 10px 30px;
 }
 
 /*Карта-Конец*/
@@ -1534,19 +1506,27 @@ input[type="checkbox"]:checked + label::after {
 .catalog-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    
     margin: 0;
-    padding: 0;
     margin-bottom: 7px;
+    padding: 0;
+   
         
     list-style: none;
 }
 
 .catalog-item {
+    position: relative;
+    
     width: 267px;
     height: 405px;
-    position: relative;   
-    margin-top: -42px;
+    
+    margin: -42px 26px 0 0;
+}  
+
+
+.catalog-item:nth-child(4n) {
+    margin-right: 0;
 }  
 
 .catalog-item a:not(.catalog-btn) {
@@ -1567,6 +1547,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .catalog-photo {
+    z-index: 10;
     margin-top: 7px;
     border-radius: 50%;
 }
@@ -1575,7 +1556,8 @@ input[type="checkbox"]:checked + label::after {
     position: absolute;
     
     margin: 0;
-    top: 218px;       
+    top: 218px;  
+    z-index: 20;
         
     font-size: 45px;
     line-height: 45px;
@@ -1590,7 +1572,8 @@ input[type="checkbox"]:checked + label::after {
 .catalog-item .catalog-btn {
     display: none;
     
-    position: absolute;
+    z-index: 10;
+    position: relative;
     left: 50%;
     margin-bottom: 22px;
     
@@ -1600,7 +1583,7 @@ input[type="checkbox"]:checked + label::after {
 .catalog-item:hover::after { 
     content: "";
      
-    z-index: 10;
+    z-index: 0;
     display: block;
     position: absolute;
     top: 0;
@@ -1712,7 +1695,7 @@ input[type="checkbox"]:checked + label::after {
 /*Футер*/
 
 .main-footer { 
-    margin-top: 20px;
+    margin-top: 15px;
      
     color: #ffffff;
 }
@@ -1832,6 +1815,10 @@ input[type="checkbox"]:checked + label::after {
 
     font-size: 12px;
     line-height: 16px;
+}
+
+.footer-copyright a {
+    margin-left: 5px;
 }
 
 .footer-copyright p {
