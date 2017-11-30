@@ -54,8 +54,8 @@
                                 <button class="btn login-btn" type="submit" value="Войти">Войти</button>
                                 
                                 <span class="reg-links">
-                                    <a href="#">Забыли пароль?</a>
-                                    <a href="#">Новая регистрация</a>
+                                    <a class="site-link-dark" href="#">Забыли пароль?</a>
+                                    <a class="site-link-dark" href="#">Новая регистрация</a>
                                 </span>
                             </form>
                         </li>
@@ -126,7 +126,9 @@
                             <div class="catalog-item-wrapper"> 
                                 <a href="#">
                                     <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-                                    <img class="catalog-photo" src="img/best1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                                    <div class="bestseller-img-wrapper">
+                                        <img class="catalog-photo" src="img/good-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                                    </div>
                                 </a>
                                 <p class="catalog-item-price">310₽<span>/кг</span></p>
                                 <a class="btn catalog-btn" href="#">Быстрый просмотр</a>
@@ -137,7 +139,9 @@
                             <div class="catalog-item-wrapper"> 
                                 <a href="#">
                                     <h3>Сливочно-кофейное с кусочками шоколада</h3>
-                                    <img class="catalog-photo" src="img/best2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+                                    <div class="bestseller-img-wrapper">
+                                        <img class="catalog-photo" src="img/good-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+                                    </div>
                                 </a>
                                 <p class="catalog-item-price">380₽<span>/кг</span></p>
                                 <a class="btn catalog-btn" href="#">Быстрый просмотр</a>
@@ -147,8 +151,10 @@
                         <li class="catalog-item">
                             <div class="catalog-item-wrapper">
                                 <a href="#">
-                                    <h3 class="catalog-item-title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
-                                    <img class="catalog-photo" src="img/best3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                                    <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
+                                    <div class="bestseller-img-wrapper">    
+                                        <img class="catalog-photo" src="img/good-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                                    </div>
                                 </a>
                                 <p class="catalog-item-price">355₽<span>/кг</span></p>
                                 <a class="btn catalog-btn" href="#">Быстрый просмотр</a>
@@ -158,8 +164,10 @@
                         <li class="catalog-item">
                             <div class="catalog-item-wrapper">
                                 <a href="#">
-                                    <h3 class="catalog-item-title">Сливочное крем-брюле с карамельной подливкой</h3>
-                                    <img class="catalog-photo" src="img/best4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+                                    <h3>Сливочное крем-брюле с карамельной подливкой</h3>
+                                    <div class="bestseller-img-wrapper">
+                                        <img class="catalog-photo" src="img/good-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+                                    </div>
                                 </a>
                                 <p class="catalog-item-price">415₽<span>/кг</span></p>
                                 <a class="btn catalog-btn" href="#">Быстрый просмотр</a>
@@ -181,7 +189,7 @@
                 <div class="index-columns">
                     <article class="blog-preview">
                         <h2>Новое в нашем блоге</h2>
-                        <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+                        <a class="site-link-dark" href="#">10 способов сервировки фруктовых щербетов к столу</a>
                     </article>
 
                     <section class="subscribe">
@@ -229,15 +237,16 @@
                     </ul>
 
                     <ul class="supplier-info">
-                            <li><a href="#">Для поставщиков</a></li>
-                            <li><a href="#">О производстве</a></li>
-                            <li><a href="#">Наши документы</a></li>
-                            <li><a href="#">Экологические стандарты</a></li>
+                           
+                            <li><a class="site-link-light" href="#"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13"><path fill="#FFF" d="M10.799 0c-1.35 0-2.551.65-3.3 1.661C6.75.65 5.549 0 4.199 0 1.875 0 0 1.806 0 4.044 0 7.223 7.499 13 7.499 13s7.499-5.777 7.499-8.956C14.998 1.806 13.123 0 10.799 0z"/></svg>Для поставщиков</a></li>
+                            <li><a class="site-link-light" href="#">О производстве</a></li>
+                            <li><a class="site-link-light" href="#">Наши документы</a></li>
+                            <li><a class="site-link-light" href="#">Экологические стандарты</a></li>
                     </ul>
 
                     <div class="footer-copyright">
                         <a href="https://htmlacademy.ru"><img src="img/logo-htmlacademy-small.png" width="108" height="39" alt="Логотип HTML Academy"></a>
-                    <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2017</p>
+                    <p>Сделано в <a class="site-link-light" href="https://htmlacademy.ru">HTML Academy</a> © 2017</p>
                     </div>
                 </div>
             </footer>
