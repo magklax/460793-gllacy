@@ -252,20 +252,52 @@
             </footer>
         </div>
         
-        <section class="modal modal-feedback">
-            <h2 class="modal-feedback-title">Мы обязательно вам ответим!</h2>
+        <section class="modal-feedback">
+            <h2>Мы обязательно вам ответим!</h2>
             <form method="post" action="https://echo.htmlacademy.ru">
                 <label class="invisible" for="feedback-name-field">Как вас зовут?</label>
-                <input class="field" id="feedback-name-field" type="text" name="feedback-name" required placeholder="Как вас зовут?">
+                <input class="field" id="feedback-name-field" type="text" name="feedback-name" placeholder="Как вас зовут?">
                 <label class="invisible" for="feedback-email-field">Ваша почта для ответа?</label>
-                <input class="field" id="feedback-email-field" type="email" name="feedback-email" required placeholder="Ваша почта для ответа?">
+                <input class="field" id="feedback-email-field" type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
                 <label class="invisible" for="feedback-text-field">Ваш отзыв</label>
-                <textarea class="field" id="feedback-text-field" name="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
-                <button class="btn feedback-btn" type="submit">Отправить</button>
+                <textarea class="field" id="feedback-text-field" name="feedback-text" placeholder="Напишите что-нибудь..." ></textarea>
+                <button class="btn modal-btn" type="submit">Отправить</button>
             </form>
-            <button class="model-close" type="button"><img src="img/x-big.svg" width="18" height="17" alt="Закрыть"></button>
+            <button class="modal-close" type="button"></button>
         </section>
         
-        
+        <script>
+            var feedback = document.querySelector(".feedback-btn");
+  
+            var popup = document.querySelector(".modal-feedback");
+            
+            var close = popup.querySelector(".modal-close");
+            
+            var form = popup.querySelector("form");
+            
+            var name_field = popup.querySelector("[name=feedback-name]");
+            var email_field = popup.querySelector("[name=feedback-email]");
+            var text_field = popup.querySelector("[name=feedback-text]");         
+
+            feedback.addEventListener("click", function (evt) {
+                evt.preventDefault();
+                popup.classList.add("modal-show");
+                name_field.focus();
+            });
+  
+            close.addEventListener("click", function (evt) {
+                evt.preventDefault();
+                popup.classList.remove("modal-show");
+            });
+            
+            
+            window.addEventListener("keydown", function (evt) {
+                if (evt.keyCode === 27) {
+                    if (popup.classList.contains("modal-show")) {
+                        popup.classList.remove("modal-show");
+                    }
+                }
+            });
+        </script> 
     </body>
 </html>

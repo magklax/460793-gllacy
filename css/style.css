@@ -8,6 +8,10 @@
 7) слайдер должен быть без задержек
 8) малинки и шоколад - полоса
 
+Почему tab проскакивает социальные кнопки?
+
+Как сделать подчеркивания?
+
 */
 
 body {
@@ -95,11 +99,13 @@ a {
 
 .field {
     padding-left: 14px;
+    min-height: 44px;
     box-sizing: border-box;  
+    
     font-size: 14px;
     line-height: 24px;
     color: #999999;
-    min-height: 44px;
+    
         
     background-color: #ffffff;
     border: 1px solid rgba(178,178,178,0.52);
@@ -111,6 +117,16 @@ a {
 }
 .field:focus {
     border: 2px solid rgba(46,136,228,0.52);
+    color: #323232;
+    font-weight: 700;
+}
+
+.field:focus::-webkit-input-placeholder {
+    opacity:0;
+}
+
+.field:active {
+    border: 2px solid rgba(76,42,0,0.52);
 }
 
 .btn {
@@ -475,8 +491,8 @@ li.dropdown-item-special a {
     border-radius: 5px;
 }
 
-.login-link:hover .login-form,
-.login-link:focus .login-form {
+.user-nav:hover .login-form,
+.user-nav:focus .login-form {
     display: block;
 }
 
@@ -573,7 +589,7 @@ li.dropdown-item-special a {
 .cart-table {
     font-size: 13px;
     line-height: 16px;
-    width: 100%; /*Изменить шаирину!!!!!!!!!!!!!!!!!*/
+    width: 100%; 
     border-bottom: 1px solid #cacac7;
 }
 
@@ -956,6 +972,8 @@ li.dropdown-item-special a {
 
 .catalog .catalog-item-title {
     margin: 13px 10px;
+    display: inline;
+    border-bottom: 1px solid rgba(255,255,255,.4);
 }
 
 .catalog-photo {
@@ -1329,14 +1347,13 @@ li.dropdown-item-special a {
     line-height: 16px;
 }
 
-/*.breadcrumbs a::after {
+.breadcrumbs a::after {
     content: "";
     position: relative;
     display: block;
     height: 1px;
     background-color: rgba(255,255,255,.2);
-}*/
-/*Хлебные крошки - Конец*/
+}
 
 .page-title {
     margin: 0;      
@@ -1413,6 +1430,21 @@ li.dropdown-item-special a {
     appearance: none;
 }
 
+.filter-category select:hover {
+    color: #323232;
+    
+    background-image: url("/img/select-arrow-dark.svg");
+    background-repeat: no-repeat;
+    background-position: 170px 50%;
+}
+
+
+
+.filter-box .select-option {
+    font-size: 14px;
+    line-height: 16px;
+}
+
 /*Цена*/
 
 .filter-category .filter-box-price {
@@ -1450,6 +1482,9 @@ li.dropdown-item-special a {
     border: none;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
+    
+    cursor: pointer;
+
 }
   
 .filter-box .scale::after {
@@ -1467,6 +1502,9 @@ li.dropdown-item-special a {
     border: none;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
+    
+    cursor: pointer;
+
 }    
     
 /*Жирность*/
@@ -1501,7 +1539,7 @@ input[type="checkbox"] {
     display: none;
 }
 
-input[type="radio"]+label::before {
+input[type="radio"]:not(:checked) + label::before {
     content: "";
     
     position: absolute;
@@ -1509,14 +1547,14 @@ input[type="radio"]+label::before {
     height: 25px;
     left: 0;
     bottom: 50%;
+    
+    opacity: 0.8;
         
     background-image: url(/img/radio-off.svg);    
     background-repeat: no-repeat;
     background-position: 0 0;
     -webkit-transform: translate(-50%,50%);
             transform: translate(-50%,50%);
-    
-    
 }
 
 input[type="radio"]:checked + label::after {
@@ -1527,6 +1565,8 @@ input[type="radio"]:checked + label::after {
     height: 25px;
     left: 0;
     bottom: 50%;
+    
+    opacity: 0.8;
         
     background-image: url(/img/radio-on.svg);    
     background-repeat: no-repeat;
@@ -1534,6 +1574,14 @@ input[type="radio"]:checked + label::after {
     -webkit-transform: translate(-50%,50%);
             transform: translate(-50%,50%);
 }
+
+input[type="radio"]:not(:checked) + label:hover::before,
+input[type="radio"]:checked + label:hover::after,
+input[type="checkbox"]:not(:checked) + label:hover::before,
+input[type="checkbox"]:checked + label:hover::after {
+    opacity: 1;
+}
+
 
 /*Наполнители*/
 
@@ -1552,7 +1600,7 @@ input[type="radio"]:checked + label::after {
     padding: 0 18px 0 15px;
 }
 
-input[type="checkbox"]+label::before {
+input[type="checkbox"]:not(:checked) + label::before {
     content: "";
     
     position: absolute;
@@ -1560,6 +1608,8 @@ input[type="checkbox"]+label::before {
     height: 25px;
     left: 0;
     bottom: 50%;
+    
+    opacity: 0.8;
         
     background-image: url(/img/checkbox-off.svg);    
     background-repeat: no-repeat;
@@ -1576,6 +1626,8 @@ input[type="checkbox"]:checked + label::after {
     height: 25px;
     left: 0;
     bottom: 50%;
+    
+    opacity: 0.8;
         
     background-image: url(/img/checkbox-on.svg);    
     background-repeat: no-repeat;
@@ -1585,17 +1637,14 @@ input[type="checkbox"]:checked + label::after {
 }
 
 
-.filter-category select:hover,
+/*.filter-category select:hover,
 .filter-category select:focus {
     color: #333333;
     
     background-color: #ffffff;
-}
+}*/
 
-.filter-box .select-option {
-    font-size: 14px;
-    line-height: 16px;
-}
+
 
 .filter-btn {
     position: absolute;
@@ -1760,7 +1809,6 @@ input[type="checkbox"]:checked + label::after {
     list-style: none;
 }
 
-
 .social-btn {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1875,22 +1923,37 @@ input[type="checkbox"]:checked + label::after {
 }
 
 /* Форма обратной связи*/
-
 .modal-feedback {
     display: none;
-    width: 478px;
     
+    width: 477px;
+    min-height: 442px;
+    box-sizing: border-box;
+    padding: 17px 25px 96px;
+    
+    z-index: 100;
     position: fixed;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+    
     color: #999999;
-
     background-color: #f8f7f4;  
+    border-radius: 10px;
+}
+
+.modal-show {
+    display: block;    
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal-feedback h2 {
+    margin: 0;
+    
     color: #323232;
     font-size: 24px;
     line-height: 28px;
@@ -1898,5 +1961,43 @@ input[type="checkbox"]:checked + label::after {
 
 .modal-feedback input,
 .modal-feedback textarea {
-    font-size: 16px;   
+    font-size: 16px;  
+    margin-top: 20px;
+    
+    box-sizing: border-box;
+}
+
+input[name="feedback-name"],
+input[name="feedback-email"] {
+    width: 265px;
+}
+
+textarea[name="feedback-text"] {
+    max-width: 428px;
+    min-width: 428px;
+    min-height: 155px;
+    padding-top: 7px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    
+    width: 20px;
+    height: 19px;
+
+    font-size: 0;
+    
+    border: 0;
+    background: url("/img/x-big.svg") 0 0 no-repeat;
+
+    cursor: pointer;
+}
+.modal-btn {
+    position: absolute;
+    
+    bottom: 25px;
+    right: 25px;
+    padding: 9px 20px 10px;
 }
