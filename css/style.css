@@ -1,13 +1,4 @@
 /*
-1) сделать выпадающие меню под tab
-2) одинаковые отсутпы
-3) + + проверить тени на кнопка. нажатие +
-4) подчеркивание ссылок в каталоге и бестселлере
-5) объединить каталог и бестселлер
-6) + + переделать сетку каталога +
-7) слайдер должен быть без задержек
-8) малинки и шоколад - полоса
-
 Почему tab проскакивает социальные кнопки?
 
 Как сделать подчеркивания?
@@ -32,6 +23,10 @@ body {
     background-image: url("/img/morozki1.png");
     background-position: top center;
     background-repeat: no-repeat;
+}
+
+.background {
+    background-repeat: repeat;
 }
 
 .site-wrapper::before,
@@ -1219,8 +1214,24 @@ li.dropdown-item-special a {
 /*Карта*/
 
 .map {
-    margin-top: 40px;
     position: relative;
+    width: 100%;
+    min-height: 430px;
+    
+    margin-top: 40px;  
+    
+    background-image: url("/img/map.jpg");
+    background-color: #849d8f;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.map iframe {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .map .container {
@@ -1234,19 +1245,18 @@ li.dropdown-item-special a {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    min-height: 430px;
     
-    background-image: url("/img/map.jpg");
-    background-color: #ffffff;
-    background-position: 50% 0;
-    background-repeat: no-repeat;
-    background-size: cover;
+    min-height: 430px;   
+    min-width: 1200px;
+    
+    margin: 0 auto;
+    
+    
 }
 .map .container::after {
     content: "";
     
     position: absolute;
-    z-index: 20;
     top: 140px;
     left: 265px;
     
@@ -1257,7 +1267,9 @@ li.dropdown-item-special a {
     background-position: 0 0;
     background-repeat: no-repeat;
 }
+
 .map-text-block {
+    z-index: 20;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1548,7 +1560,7 @@ input[type="radio"]:not(:checked) + label::before {
     
     opacity: 0.8;
         
-    background-image: url(/img/radio-off.svg);    
+    background-image: url("/img/radio-off.svg");    
     background-repeat: no-repeat;
     background-position: 0 0;
     -webkit-transform: translate(-50%,50%);
@@ -1566,7 +1578,7 @@ input[type="radio"]:checked + label::after {
     
     opacity: 0.8;
         
-    background-image: url(/img/radio-on.svg);    
+    background-image: url("/img/radio-on.svg");    
     background-repeat: no-repeat;
     background-position: 0 0;
     -webkit-transform: translate(-50%,50%);
@@ -1609,7 +1621,7 @@ input[type="checkbox"]:not(:checked) + label::before {
     
     opacity: 0.8;
         
-    background-image: url(/img/checkbox-off.svg);    
+    background-image: url("/img/checkbox-off.svg");    
     background-repeat: no-repeat;
     background-position: 0 0;
     -webkit-transform: translate(-50%,50%);
@@ -1627,7 +1639,7 @@ input[type="checkbox"]:checked + label::after {
     
     opacity: 0.8;
         
-    background-image: url(/img/checkbox-on.svg);    
+    background-image: url("/img/checkbox-on.svg");    
     background-repeat: no-repeat;
     background-position: 0 0;
     -webkit-transform: translate(-50%,50%);
@@ -1830,15 +1842,15 @@ input[type="checkbox"]:checked + label::after {
 }
 
 
-.social-btn:hover,
-.social-btn:focus {
+a.social-btn:hover,
+a.social-btn:focus {
     box-shadow: 
         0 0 0 4px rgba(255,255,255,0.7), 
         inset 0 0 0 1px rgba(255,255,255,0.6);
     opacity: 1;
 }
 
-.social-btn:active {
+a.social-btn:active {
     opacity: 0.8;
     box-shadow: 
         0 0 0 3px rgba(194,206,199,0.5),
@@ -1921,6 +1933,30 @@ input[type="checkbox"]:checked + label::after {
 }
 
 /* Форма обратной связи*/
+
+@-webkit-keyframes appearance {
+    0% {
+        -webkit-transform: scale(0.1);
+                transform: scale(0.1);
+    }
+    30%
+    100% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+}
+
+@keyframes appearance {
+    0% {
+        -webkit-transform: scale(0.1);
+                transform: scale(0.1);
+    }
+    30%
+    100% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+}
 .modal-feedback {
     display: none;
     
@@ -1933,8 +1969,9 @@ input[type="checkbox"]:checked + label::after {
     position: fixed;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    
+    margin-left: -238.5px;
+    margin-top: -221px;
     
     color: #999999;
     background-color: #f8f7f4;  
@@ -1942,11 +1979,9 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .modal-show {
-    display: block;    
-}
-
-.modal-error {
-  animation: shake 0.6s;
+    display: block;   
+    -webkit-animation: appearance 0.3s;   
+            animation: appearance 0.3s;    
 }
 
 .modal-feedback h2 {
@@ -1998,4 +2033,19 @@ textarea[name="feedback-text"] {
     bottom: 25px;
     right: 25px;
     padding: 9px 20px 10px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.3);
+}
+
+.overlay {
+    display: block;
 }

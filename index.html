@@ -193,7 +193,7 @@
                     </article>
 
                     <section class="subscribe">
-                       <div class="subscribe-wrapper">
+                        <div class="subscribe-wrapper">
                             <h2 class="invisible">Подписка на рассылку</h2>
                             <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
                             <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru">
@@ -201,13 +201,14 @@
                                 <input class="field" type="email" name="subscribe-email" id="subscribe-email-field" placeholder="Электронная почта">
                                 <button class="btn subscribe-btn" type="submit">Отправить</button>
                             </form>
-                       </div>
-                        
+                        </div>
                     </section>
                 </div>
 
             </main>
+            
             <section class="map">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8939e06829592b6a61624b920ce11588f6cec623cbbbc846186a4a676cc7036e&amp;source=constructor" width="100%" height="430" frameborder="0"></iframe>
                 <div class="container">
                     <h2 class="invisible">Карта проезда</h2>
                     <div class="map-text-block">
@@ -223,6 +224,7 @@
                         <a class="btn feedback-btn" href="#">Форма обратной связи</a>
                      </div>
                 </div>
+                
             </section>
 
             <footer class="main-footer">
@@ -266,60 +268,11 @@
             <button class="modal-close" type="button"></button>
         </section>
         
-        <script>
-            var feedback = document.querySelector(".feedback-btn");
-  
-            var popup = document.querySelector(".modal-feedback");
-            
-            var close = popup.querySelector(".modal-close");
-            
-            var form = popup.querySelector("form");
-            
-            var username = popup.querySelector("[name=feedback-name]");  
-            var email = popup.querySelector("[name=feedback-email]");  
-            var user_feedback = popup.querySelector("[name=feedback-text]");  
-            
-            var storage_username = localStorage.getItem("feedback-name");
-            var storage_email = localStorage.getItem("feedback-email");
-            
-            feedback.addEventListener("click", function (evt) {
-                evt.preventDefault();
-                popup.classList.add("modal-show");
-                
-                if (storage_username) {
-                    username.value = storage_username;
-                    email.focus();
-                }
-                
-                if (storage_email) {
-                    email.value = storage_email;
-                    user_feedback.focus();
-                }
-            });
-  
-            close.addEventListener("click", function (evt) {
-                evt.preventDefault();
-                popup.classList.remove("modal-show");
-            });
-            
-            form.addEventListener("submit", function (evt) {
-                if (!username.value || !email.value || !user_feedback.value) {
-                    evt.preventDefault();
-                    console.log("Введите имя, электронную почту и напишите отзыв");
-                }
-                else {
-                    localStorage.setItem("feedback-name", username.value);
-                    localStorage.setItem("feedback-email", email.value);
-                }
-            });
-            
-            window.addEventListener("keydown", function (evt) {
-                if (evt.keyCode === 27) {
-                    if (popup.classList.contains("modal-show")) {
-                        popup.classList.remove("modal-show");
-                    }
-                }
-            });
-        </script> 
+        <div class="modal-overlay"></div>
+        
+        
+        <script src="js/popup.js"></script> 
+     
     </body>
 </html>
+
