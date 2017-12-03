@@ -1,7 +1,3 @@
-/*
-Как сделать подчеркивания?
-*/
-
 body {
     margin: 0;
     padding: 0;
@@ -1044,7 +1040,8 @@ li.dropdown-item-special a {
     color: #ffffff;
 }
 
-.catalog-item h3 {
+.catalog-item .bestseller-item-title,
+.catalog .catalog-item-title {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -1058,11 +1055,14 @@ li.dropdown-item-special a {
 .catalog .catalog-item-title {
     margin: 13px 10px;
     display: inline;
-    border-bottom: 1px solid rgba(255,255,255,.4);
+}
+
+.bestseller-item-title span,
+.catalog-item-title span {
+     border-bottom: 1px solid rgba(255,255,255,.4);
 }
 
 .catalog-photo {
-    
     margin-top: 7px;
     border-radius: 50%;
 }
@@ -1471,6 +1471,17 @@ li.dropdown-item-special a {
     
     font-size: 14px;
     line-height: 16px;
+}
+.breadcrumbs a {
+    color: #ffffff;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus,
+.breadcrumbs a:active {
+    color: #ffbc9e;
+    -webkit-transition: 0.2s;
+    transition: 0.2s
 }
 
 .breadcrumbs a::after {
