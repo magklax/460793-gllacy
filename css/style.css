@@ -2,14 +2,6 @@
 Почему tab проскакивает социальные кнопки?
 
 Как сделать подчеркивания?
-
-
-
-
-
-еще везде при ховере как бы желателен transition: 0.2s;
-#плавные переходы
-
 */
 
 body {
@@ -27,7 +19,7 @@ body {
     min-width: 1200px;
     
     background-color: #849d8f;
-    background-image: url("/img/morozki1.png");
+    background-image: url("../img/morozki1.png");
     background-position: top center;
     background-repeat: no-repeat;
 }
@@ -44,11 +36,11 @@ body {
 }
 
 .site-wrapper::before {
-    background-image: url("/img/morozki2.png");
+    background-image: url("../img/morozki2.png");
 }
 
 .site-wrapper::after {
-    background-image: url("/img/morozki3.png");
+    background-image: url("../img/morozki3.png");
 }
 
 .inner-page {
@@ -80,6 +72,7 @@ a {
 .inner-page a.site-link-light:focus,
 .inner-page a.site-link-light:active {
     color: #ffbc9e;
+    -webkit-transition: 0.2s;
     transition: 0.2s
 }
 
@@ -96,6 +89,7 @@ a {
 .inner-page a.site-link-dark:focus, 
 .inner-page a.site-link-dark:active {
     color: #e84d37;
+    -webkit-transition: 0.2s;
     transition: 0.2s
 }
 
@@ -103,7 +97,8 @@ a {
     padding: 10px 14px;
     
     min-height: 44px;
-    box-sizing: border-box;  
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;  
     
     font-size: 14px;
     line-height: 24px;
@@ -121,6 +116,7 @@ a {
 .field:hover {
     border: 2px solid rgba(178,178,178,0.52);  
     padding: 9px 13px;
+    -webkit-transition: 0.2s;
     transition: 0.2s
 }
 
@@ -152,25 +148,33 @@ a {
     vertical-align: top;
     
     background-color: #ef6140;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f26843), to(#ca3824));
     background: linear-gradient(#f26843, #ca3824);
     border-radius: 18px;  
     border: none;
     
-    box-shadow: 0 2px 2px rgba(85,8,0,0.54);
+    -webkit-box-shadow: 0 2px 2px rgba(85,8,0,0.54);
+    
+            box-shadow: 0 2px 2px rgba(85,8,0,0.54);
     
     cursor: pointer;    
 }
 
 .btn:hover,
 .btn:focus {
+    background: -webkit-gradient(linear,left top, left bottom,from(#f58669),to(#e74a35));
     background: linear-gradient(#f58669,#e74a35);
-    box-shadow: 0 1px 2px #ac1000;   
+    -webkit-box-shadow: 0 1px 2px #ac1000;
+            box-shadow: 0 1px 2px #ac1000;   
+    -webkit-transition: 0.2s;   
     transition: 0.2s
 }
 
 .btn:active {
+    background: -webkit-gradient(linear, left top, left bottom, from(#f26843), to(#e74a35));
     background: linear-gradient(#f26843, #e74a35);
-    box-shadow: inset 0 2px 2px #942718;
+    -webkit-box-shadow: inset 0 2px 2px #942718;
+            box-shadow: inset 0 2px 2px #942718;
 }
 
 .btn.disabled,
@@ -228,7 +232,9 @@ input[type="radio"].invisible {
     margin: 0 auto;
     padding: 0 27px;
     
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    
+            box-sizing: border-box;
 }
 
 .main-logo {
@@ -288,19 +294,23 @@ input[type="radio"].invisible {
     border-radius: 18px;
     background-color: #f7f6f3;
     
+    -webkit-transition: 0.2s;
+    
     transition: 0.2s
 }
 
 .site-nav-item > a:active {
     border-radius: 18px;
     background-color: #ededed;
-    box-shadow: inset 0 2px 1px #696969;
+    -webkit-box-shadow: inset 0 2px 1px #696969;
+            box-shadow: inset 0 2px 1px #696969;
 }
 
 .site-nav-item a.current {
     border-radius: 18px;
     background-color: #d07058;
-    box-shadow: inset 0 2px 1px rgba(105,105,105,0);
+    -webkit-box-shadow: inset 0 2px 1px rgba(105,105,105,0);
+            box-shadow: inset 0 2px 1px rgba(105,105,105,0);
 }
 
 /***************************************************************************/
@@ -308,6 +318,8 @@ input[type="radio"].invisible {
 .site-nav-item:hover .main-dropdown,
 .site-nav-item:focus .main-dropdown {
     display: inline-block;
+    
+    -webkit-transition: 0.2s;
     
     transition: 0.2s
 }
@@ -324,7 +336,8 @@ ul.main-dropdown {
     padding-bottom: 8px;
     
     width: 143px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     
     font: inherit;
     color: #323232;
@@ -334,7 +347,8 @@ ul.main-dropdown {
         
     list-style: none;
     background-color: #f8f7f4;
-    box-shadow: 0 20px 20px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0 20px 20px rgba(0,0,0,0.4);
+            box-shadow: 0 20px 20px rgba(0,0,0,0.4);
     border-radius: 5px;
 }
 
@@ -372,6 +386,8 @@ li.dropdown-item-special a {
 .main-dropdown a:focus {
     background-color: #fbded7;
     border-radius: 0;
+    
+    -webkit-transition: 0.2s;
     
     transition: 0.2s
 }
@@ -419,6 +435,8 @@ li.dropdown-item-special a {
     
     background-color: #f8f7f4;
     
+    -webkit-transition: 0.2s;
+    
     transition: 0.2s
 }
 
@@ -427,7 +445,8 @@ li.dropdown-item-special a {
     display: none;
     
     background-color: #f8f7f4;
-    box-shadow: 0 20px 20px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0 20px 20px rgba(0,0,0,0.4);
+            box-shadow: 0 20px 20px rgba(0,0,0,0.4);
 }
 
 /***************************************************************************/
@@ -443,7 +462,9 @@ li.dropdown-item-special a {
     top: 51px;
     right: 0;
     
-    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    
+            box-sizing: border-box; 
     width: 340px;
     padding: 20px 15px;
     
@@ -453,6 +474,8 @@ li.dropdown-item-special a {
 .search:hover .search-form,
 .search:focus .search-form {
     display: block;
+    
+    -webkit-transition: 0.2s;
     
     transition: 0.2s
 }
@@ -490,6 +513,8 @@ li.dropdown-item-special a {
 .cart-empty a:focus .cart-img circle {
     fill: #333333;
     
+    -webkit-transition: 0.2s;
+    
     transition: 0.2s
 }
 
@@ -517,13 +542,16 @@ li.dropdown-item-special a {
 .user-nav:focus .login-form {
     display: block;
     
+    -webkit-transition: 0.2s;
+    
     transition: 0.2s
 }
 
 .login-link .field {
     margin: 0;
     min-width: 240px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     border-radius: 5px;
     margin-bottom: 22px;
 }
@@ -567,7 +595,8 @@ li.dropdown-item-special a {
 .cart > a {
     width: 117px;
     height: 32px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin-left: 10px;
     padding: 8px 0 8px 10px;
 }
@@ -582,6 +611,8 @@ li.dropdown-item-special a {
 .cart:focus .table-box {
     display: block;
     
+    -webkit-transition: 0.2s;
+    
     transition: 0.2s
 }
 
@@ -592,7 +623,9 @@ li.dropdown-item-special a {
     top: 51px;
     right: 0;
     
-    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    
+            box-sizing: border-box; 
     
     padding: 20px 15px 0;
     
@@ -609,7 +642,8 @@ li.dropdown-item-special a {
     
     
     background-color: #f8f7f4;
-    box-shadow: 0 20px 20px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0 20px 20px rgba(0,0,0,0.4);
+            box-shadow: 0 20px 20px rgba(0,0,0,0.4);
 }
 
 .cart-table {
@@ -766,24 +800,33 @@ li.dropdown-item-special a {
     vertical-align: top;
     
     background-color: #ef6140;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f26843), to(#e74a35));
     background: linear-gradient(#f26843, #e74a35);
     border-radius: 50px;  
         
-    box-shadow: 0 2px 2px rgba(172,16,0,0.64);
+    -webkit-box-shadow: 0 2px 2px rgba(172,16,0,0.64);  
+        
+            box-shadow: 0 2px 2px rgba(172,16,0,0.64);
     text-shadow: 0 2px 5px rgba(160,32,11,.76);
 }
 
 .slide-btn:hover,
 .slide-btn:focus {
+    background: -webkit-gradient(linear,left top, left bottom,from(#f58669),to(#ec6f5e));
     background: linear-gradient(#f58669,#ec6f5e);
-    box-shadow: 0 2px 2px #ac1000;   
+    -webkit-box-shadow: 0 2px 2px #ac1000;
+            box-shadow: 0 2px 2px #ac1000;   
+    
+    -webkit-transition: 0.2s;   
     
     transition: 0.2s
 }
 
 .slide-btn:active {
+    background: -webkit-gradient(linear, left top, left bottom, from(#d74632), to(#e1613e));
     background: linear-gradient(#d74632, #e1613e);
-    box-shadow: inset 0 2px 2px #942718;
+    -webkit-box-shadow: inset 0 2px 2px #942718;
+            box-shadow: inset 0 2px 2px #942718;
 }
     
 #product-1:checked ~ .site-wrapper #slide1,
@@ -799,30 +842,36 @@ li.dropdown-item-special a {
 }
 
 #product-1:checked ~ .site-wrapper {
-    background-image: url(/img/morozki1.png);
+    background-image: url(../img/morozki1.png);
     background-color: #849d8f;
 }
 
 #product-2:checked ~ .site-wrapper {
-    background-image: url(/img/morozki2.png);
+    background-image: url(../img/morozki2.png);
     background-color: #8996a6;
 }
 
 #product-3:checked ~ .site-wrapper {
-    background-image: url(/img/morozki3.png);
+    background-image: url(../img/morozki3.png);
     background-color: #9d8b84;
 }
 
 .slide-btn:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#f58669), to(#ec6f5e));
     background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
-    box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+    -webkit-box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+            box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+    
+    -webkit-transition: 0.2s;
     
     transition: 0.2s
 }
 
 .slide-btn:active {
+    background: -webkit-gradient(linear, left top, left bottom, from(#d84732), to(#e1613e));
     background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
-    box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+    -webkit-box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+            box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 .slider-control {
     position: absolute;
@@ -849,6 +898,8 @@ li.dropdown-item-special a {
 
 .slider-control label:hover {
     background-color: rgba(255,255,255,0.4);
+    
+    -webkit-transition: 0.2s;
     
     transition: 0.2s
 }
@@ -881,21 +932,22 @@ li.dropdown-item-special a {
     
     width: 560px;
     min-height: 230px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     
     border-radius: 18px;
 }
 
 .promotion-block-left {
     background-color: #be3256;
-    background-image: url("/img/ras-background.jpg");
+    background-image: url("../img/ras-background.jpg");
     background-position: 0 0;
     background-repeat: repeat-y;
     background-size: cover;
 }
 .promotion-block-right {
     background-color: #451700;
-    background-image: url("/img/choko-background.jpg");
+    background-image: url("../img/choko-background.jpg");
     background-position: 0 0;
     background-repeat: repeat-y;
     background-size: cover;
@@ -937,7 +989,7 @@ li.dropdown-item-special a {
     width: 61px;
     height: 61px;
     
-    background-image: url("/img/hit.svg");
+    background-image: url("../img/hit.svg");
 }
 
 /*Каталог*/
@@ -1064,11 +1116,16 @@ li.dropdown-item-special a {
     height: 405px;
     background-color: rgba(255,255,255,0.2);
     border-radius: 10px;
-    box-shadow: 
+    -webkit-box-shadow: 
+        0 20px 20px rgba(0,0,0,0.4)
+        inset 0 3px 7px rgba(0,0,0,0.35);
+            box-shadow: 
         0 20px 20px rgba(0,0,0,0.4)
         inset 0 3px 7px rgba(0,0,0,0.35);
     
     cursor: pointer;
+    
+    -webkit-transition: 0.2s;
     
     transition: 0.2s
 }
@@ -1078,12 +1135,16 @@ li.dropdown-item-special a {
     display: inline-block; 
     vertical-align: top;
     
+    -webkit-transition: 0.2s;
+    
     transition: 0.2s
 }
 
 .catalog-item:hover .catalog-item-wrapper a, 
 .catalog-item:hover .catalog-item-wrapper p {
     z-index: 30;
+    
+    -webkit-transition: 0.2s;
     
     transition: 0.2s
 }
@@ -1092,7 +1153,8 @@ li.dropdown-item-special a {
 
 .features {
     width: 1146px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin: 0;   
     margin-top: -75px;
     margin-bottom: 40px;
@@ -1101,7 +1163,7 @@ li.dropdown-item-special a {
     color: #323232;
     
     background-color: #ecdfc4;
-    background-image: url("/img/waffle-background.jpg");
+    background-image: url("../img/waffle-background.jpg");
     background-position: 0 0;
     background-repeat: repeat;
     border-radius: 15px;
@@ -1157,26 +1219,27 @@ li.dropdown-item-special a {
 }
 
 .features-list li:first-child::before {
-    background-image: url("/img/icecream.svg");
+    background-image: url("../img/icecream.svg");
 }
 
 .features-list li:nth-child(2)::before {
-    background-image: url("/img/cow.svg");
+    background-image: url("../img/cow.svg");
 }
 
 .features-list li:nth-child(3)::before {
-    background-image: url("/img/leaf.svg");
+    background-image: url("../img/leaf.svg");
 }
 
 .features-list li:last-child::before {
-    background-image: url("/img/thermometer.svg");
+    background-image: url("../img/thermometer.svg");
 }
 
 /*Блог*/
 
 .blog-preview {
     width: 560px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     box-sizing: border-box;
     min-height: 170px;
         
@@ -1185,7 +1248,7 @@ li.dropdown-item-special a {
     color: #323232;
     
     background-color: #ffffff;
-    background-image: url("/img/straw-background.jpg");
+    background-image: url("../img/straw-background.jpg");
     background-position: 100% 0;
     background-repeat: repeat-y;
     border-radius: 15px;
@@ -1209,7 +1272,8 @@ li.dropdown-item-special a {
 
 .subscribe {
     width: 560px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     min-height: 210px;
     
     padding: 5px;
@@ -1217,7 +1281,7 @@ li.dropdown-item-special a {
     color: #5a5a5a;
     
     background-color: #f8f7f4;
-    background-image: url("/img/post-background.svg");
+    background-image: url("../img/post-background.svg");
     background-position: 0 0;
     background-repeat: repeat-y;
     border-radius: 15px;
@@ -1270,7 +1334,7 @@ li.dropdown-item-special a {
     
     margin-top: 40px;  
     
-    background-image: url("/img/map.jpg");
+    background-image: url("../img/map.jpg");
     background-color: #849d8f;
     background-position: 50% 0;
     background-repeat: no-repeat;
@@ -1313,7 +1377,7 @@ li.dropdown-item-special a {
     width: 90px;
     height: 150px;
     
-    background-image: url("/img/pin.svg");
+    background-image: url("../img/pin.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
 }
@@ -1332,7 +1396,8 @@ li.dropdown-item-special a {
     margin: 63px 0 63px;
         
     width: 305px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 26px 27px 0;   
         
     color: #323232;
@@ -1468,7 +1533,7 @@ li.dropdown-item-special a {
     font-size: 16px;
     line-height: 18px;
     
-    background-image: url("/img/select-arrow.svg");
+    background-image: url("../img/select-arrow.svg");
     background-repeat: no-repeat;
     background-position: 168px 50%;
     
@@ -1481,7 +1546,7 @@ li.dropdown-item-special a {
     color: #323232;
     background-color: #ffffff;
     
-    background-image: url("/img/select-arrow-dark.svg");
+    background-image: url("../img/select-arrow-dark.svg");
     
 }
 
@@ -1511,7 +1576,9 @@ li.dropdown-item-special a {
     
     padding: 16px 21px;
     
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    
+            box-sizing: border-box;
 }
 
 .filter-box-price .main-scale {
@@ -1547,7 +1614,10 @@ li.dropdown-item-special a {
 }
 
 .filter-box-price .range:hover {
-    box-shadow: 0 0 0 1px #ffffff;
+    -webkit-box-shadow: 0 0 0 1px #ffffff;
+            box-shadow: 0 0 0 1px #ffffff;
+    
+    -webkit-transition: 0.2s;
     
     transition: 0.2s
 }
@@ -1606,7 +1676,9 @@ input[type=range]::-webkit-slider-thumb {
 .filter-box-topping {
     min-height: 36px;
     
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    
+            box-sizing: border-box;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1666,22 +1738,22 @@ input[type="checkbox"]:checked + label:before {
 }
 
 input[type="radio"]:not(:checked) + label:before {
-    background-image: url("/img/radio-off.svg");    
+    background-image: url("../img/radio-off.svg");    
 }
 
 input[type="radio"]:checked + label:before {
-    background-image: url("/img/radio-on.svg");    
+    background-image: url("../img/radio-on.svg");    
 }
 
 
 input[type="checkbox"]:not(:checked) + label:before {
-    background-image: url("/img/checkbox-off.svg");    
+    background-image: url("../img/checkbox-off.svg");    
 }
 
 input[type="checkbox"]:checked + label:before {
     width: 23px;
     
-    background-image: url("/img/checkbox-on.svg");    
+    background-image: url("../img/checkbox-on.svg");    
 }
  input[type="radio"]:disabled + label {
     opacity: 0.4;
@@ -1697,6 +1769,8 @@ input[type="checkbox"]:checked:focus + label:before,
 input[type="checkbox"]:not(:checked):hover + label:before, 
 input[type="checkbox"]:not(:checked):focus + label:before {
     opacity: 1;
+    
+    -webkit-transition: 0.2s;
     
     transition: 0.2s
 }
@@ -1727,12 +1801,15 @@ input[type="checkbox"]:not(:checked):focus + label:before {
     
     background-color: #ffffff;
     
+    -webkit-transition: 0.2s;
+    
     transition: 0.2s
 }    
 
 .filter-btn:active {
     background-color: #eaeaea;
-    box-shadow: inset 0 2px 1px #696969;
+    -webkit-box-shadow: inset 0 2px 1px #696969;
+            box-shadow: inset 0 2px 1px #696969;
 }
 
 .pagination-list {
@@ -1800,6 +1877,8 @@ input[type="checkbox"]:not(:checked):focus + label:before {
 .pagination-list a.next:active {
     background-color: transparent;  
     
+    -webkit-transition: 0.2s;  
+    
     transition: 0.2s
 }
 
@@ -1811,7 +1890,7 @@ input[type="checkbox"]:not(:checked):focus + label:before {
     width: 25px;
     height: 25px;
     
-    background-image: url("/img/next.svg");
+    background-image: url("../img/next.svg");
     background-repeat: no-repeat;
     background-position: center right;
         
@@ -1824,7 +1903,7 @@ input[type="checkbox"]:not(:checked):focus + label:before {
     width: 25px;
     height: 25px;
     
-    background-image: url("/img/next.svg");
+    background-image: url("../img/next.svg");
     background-repeat: no-repeat;
     background-position: center right; 
 }
@@ -1859,7 +1938,8 @@ input[type="checkbox"]:not(:checked):focus + label:before {
         flex-wrap: wrap;
     
     width: 185px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin: 0;
     padding: 21px 5px;
         
@@ -1879,7 +1959,10 @@ input[type="checkbox"]:not(:checked):focus + label:before {
     width: 31px;
     height: 31px;
       /**********ПЕРЕДЕЛАТЬ*******************/
-    box-shadow: 
+    -webkit-box-shadow: 
+        0 0 0 3px rgba(233,233,233,0.6),
+        inset 0 0 0 1px rgba(233,233,233,0.6);
+            box-shadow: 
         0 0 0 3px rgba(233,233,233,0.6),
         inset 0 0 0 1px rgba(233,233,233,0.6);
     border-radius: 50%;
@@ -1889,16 +1972,24 @@ input[type="checkbox"]:not(:checked):focus + label:before {
 
 a.social-btn:hover,
 a.social-btn:focus {
-    box-shadow: 
+    -webkit-box-shadow: 
+        0 0 0 3px rgba(233,233,233,0.7), 
+        inset 0 0 0 1px rgba(233,233,233,0.6);
+            box-shadow: 
         0 0 0 3px rgba(233,233,233,0.7), 
         inset 0 0 0 1px rgba(233,233,233,0.6);
     opacity: 1;
+    
+    -webkit-transition: 0.2s;
     
     transition: 0.2s
 }
 
 a.social-btn:active {
-    box-shadow: 
+    -webkit-box-shadow: 
+        0 0 0 3px rgba(233,233,233,0.7), 
+        inset 0 2px 1px rgba(136,136,136,1);
+            box-shadow: 
         0 0 0 3px rgba(233,233,233,0.7), 
         inset 0 2px 1px rgba(136,136,136,1);
 }
@@ -1942,6 +2033,8 @@ a.social-btn:active {
 .supplier-info a:focus .icon path, 
 .supplier-info a:active .icon path {
     fill: #ffbc9e;
+    
+    -webkit-transition: 0.2s;
     
     transition: 0.2s
 }
@@ -2010,7 +2103,8 @@ a.social-btn:active {
     
     width: 477px;
     min-height: 442px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 17px 25px 96px;
     
     z-index: 100;
@@ -2031,6 +2125,8 @@ a.social-btn:active {
     -webkit-animation: appearance 0.3s;   
             animation: appearance 0.3s;    
     
+    -webkit-transition: 0.2s;    
+    
     transition: 0.2s;
 }
 
@@ -2047,7 +2143,9 @@ a.social-btn:active {
     font-size: 16px;  
     margin-top: 20px;
     
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    
+            box-sizing: border-box;
 }
 
 input[name="feedback-name"],
@@ -2073,7 +2171,7 @@ textarea[name="feedback-text"] {
     font-size: 0;
     
     border: 0;
-    background: url("/img/x-big.svg") 0 0 no-repeat;
+    background: url("../img/x-big.svg") 0 0 no-repeat;
 
     cursor: pointer;
 }
