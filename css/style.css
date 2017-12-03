@@ -2030,6 +2030,8 @@ a.social-btn:active {
     display: block;   
     -webkit-animation: appearance 0.3s;   
             animation: appearance 0.3s;    
+    
+    transition: 0.2s;
 }
 
 .modal-feedback h2 {
