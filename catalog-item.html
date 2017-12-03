@@ -124,18 +124,27 @@
                     
                         <fieldset class="filter-category">
                             <legend>Цена: 100 руб. - 500 руб.</legend>
+                             
                             <div class="filter-box filter-box-price">
-                                <div class="scale">
-                                    <div class="scale-middle"></div>
-                                </div>                                
+                                 <div class="main-scale">
+                                    <div class="middle-scale"></div>
+                                 </div>
+                                 <div class="range range-min"></div>
+                                 <div class="range range-max"></div>
                             </div>
+                            
+                            <!--Вариант через двойной range
+                               <div class="filter-box filter-box-price"> 
+                                <input type="range" min="100" max="500" id="price-min" value="150">
+                                <input type="range" min="100" max="500" id="price-max" value="350">
+                            </div>-->
                         </fieldset>          
                     
                         <fieldset class="filter-category">
                             <legend>Жирность:</legend>
                             <ul class="filter-box filter-box-fat">
                                 <li>
-                                    <input type="radio" id="zero" name="fat-content" value="0">
+                                    <input type="radio" id="zero" name="fat-content" value="0" disabled>
                                     <label for="zero">0%</label>
                                 </li>
                                 <li>
