@@ -92,39 +92,50 @@ a {
 
 .field {
     padding: 10px 14px;
-    
+
     height: 44px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;  
-    
+
     font-size: 14px;
     line-height: 24px;
-    color: #999999;
-    
-        
+    color: #323232;
+
+    font-weight: 700;
+
     background-color: #ffffff;
     border: 
         1px solid rgba(178,178,178,0.52);
     border-radius: 5px;
-    
+
     overflow: hidden;
 }
 
-.field:hover {
+::-webkit-input-placeholder {
+    font-weight: 400;
+    color: #999999;
+}
+::-moz-placeholder {
+    font-weight: 400;
+    color: #999999;
+}
+:-ms-input-placeholder { 
+    font-weight: 400;
+    color: #999999;
+}
+:-moz-placeholder { 
+    font-weight: 400;
+    color: #999999;
+}
+
+.field:hover,
+.field:focus {
     border: 1px solid rgba(154,154,154,0.52);
     -webkit-box-shadow: inset 0 0 0 1px rgba(154,154,154,0.52);
             box-shadow: inset 0 0 0 1px rgba(154,154,154,0.52);  
     -webkit-transition: 0.2s;  
     -o-transition: 0.2s;  
     transition: 0.2s
-}
-
-.field:focus {
-    border: 1px solid rgba(46,136,228,0.52);
-    -webkit-box-shadow: inset 0 0 0 1px rgba(46,136,228,0.52);
-            box-shadow: inset 0 0 0 1px rgba(46,136,228,0.52);
-    color: #323232;
-    font-weight: 700;
 }
 
 .field:focus::-webkit-input-placeholder {
@@ -144,7 +155,9 @@ a {
 }
 
 .field:active {
-    border: 2px solid rgba(76,42,0,0.52);
+    border: 1px solid rgba(76,42,0,0.52);
+    -webkit-box-shadow: inset 0 0 0 1px rgba(76,42,0,0.52);
+            box-shadow: inset 0 0 0 1px rgba(76,42,0,0.52);  
 }
 
 .btn {
@@ -1789,7 +1802,7 @@ catalog-item:hover .catalog-item-wrapper p,
 
 .filter-box li { 
     position: relative; 
-    padding: 0 0 0 21px; 
+    padding: 9px 0 9px 21px; 
     display: -webkit-box; 
     display: -ms-flexbox; 
     display: flex; 
