@@ -22,12 +22,16 @@ feedback.addEventListener("click", function (evt) {
 
     if (storage_username) {
         username.value = storage_username;
-        email.focus();
+        if (storage_email) {
+            email.value = storage_email;
+            user_feedback.focus();
+        }
+        else {
+            email.focus();
+        }
     }
-
-    if (storage_email) {
-        email.value = storage_email;
-        user_feedback.focus();
+    else {
+        username.focus();
     }
 });
 
