@@ -1262,7 +1262,7 @@ li.dropdown-item-special a {
 }
 
 .catalog-item:hover .catalog-item-wrapper a,
-catalog-item:hover .catalog-item-wrapper p, 
+.catalog-item:hover .catalog-item-wrapper p, 
 .catalog-item a:focus .catalog-photo,
 .catalog-item a:focus ~ p {
     z-index: 30;
