@@ -1635,9 +1635,7 @@ li.dropdown-item-special a {
     border: none;
     
     -webkit-appearance: none;
-    
        -moz-appearance: none;
-    
             appearance: none;
 }
 
@@ -1839,7 +1837,6 @@ input[type="checkbox"]:checked + label::after {
     background-image: url("../img/checkbox-on.svg");    
 }
 
-
 input[type="radio"]:not(:checked):hover + label::before ,
 input[type="radio"]:checked:hover + label::after, 
 
@@ -1862,9 +1859,7 @@ input[type="checkbox"]:checked:focus + label::after {
     opacity: 1;
     
     -webkit-transition: 0.1s;
-    
     -o-transition: 0.1s;
-    
     transition: 0.1s;
 }
 
@@ -1891,7 +1886,6 @@ input[type="radio"]:not(:checked):disabled + label::before {
     padding: 7px 32px 7px 28px;
     
     font-size: 16px;
-    
     line-height: 18px;
     font-weight: 500;
     color: #ffffff;
@@ -1907,9 +1901,7 @@ input[type="radio"]:not(:checked):disabled + label::before {
     background-color: #ffffff;
     
     -webkit-transition: 0.2s;
-    
     -o-transition: 0.2s;
-    
     transition: 0.2s
 }    
 
@@ -1941,7 +1933,8 @@ input[type="radio"]:not(:checked):disabled + label::before {
 .pagination-list a {
     display: block;
     width: 25px;
-    max-height: 25px;
+    height: 25px;
+    box-sizing: border-box;
     
     margin: 0 0 0 3px;
     padding: 3.5px 0; 
@@ -1981,9 +1974,7 @@ input[type="radio"]:not(:checked):disabled + label::before {
     background-color: transparent;  
     
     -webkit-transition: 0.2s;  
-    
     -o-transition: 0.2s;  
-    
     transition: 0.2s
 }
 
@@ -2000,9 +1991,7 @@ input[type="radio"]:not(:checked):disabled + label::before {
     background-position: center right;
         
     -webkit-transform: rotate(180deg);
-        
         -ms-transform: rotate(180deg);
-        
             transform: rotate(180deg);
 }
 
@@ -2071,7 +2060,6 @@ input[type="radio"]:not(:checked):disabled + label::before {
     border-radius: 50%;
     opacity: 0.8;
 }
-
 
 a.social-btn:hover,
 a.social-btn:focus {
@@ -2210,9 +2198,7 @@ a.social-btn:active {
             animation: appearance 0.3s;    
     
     -webkit-transition: 0.2s;    
-    
     -o-transition: 0.2s;    
-    
     transition: 0.2s;
 }
 
@@ -2233,6 +2219,10 @@ a.social-btn:active {
 input[name="feedback-name"],
 input[name="feedback-email"] {
     width: 265px;
+}
+
+.modal-error {
+    background-color: rgba(239,119,98,0.5);
 }
 
 textarea[name="feedback-text"] {

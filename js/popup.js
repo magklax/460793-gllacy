@@ -15,6 +15,10 @@ var user_feedback = popup.querySelector("[name=feedback-text]");
 var storage_username = localStorage.getItem("feedback-name");
 var storage_email = localStorage.getItem("feedback-email");
 
+var error_username = document.querySelector("input[name=feedback-name]");
+var error_email = document.querySelector("input[name=feedback-email]");
+var error_feedback = document.querySelector("textarea[name=feedback-text]");
+
 feedback.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add("modal-show");
@@ -42,15 +46,31 @@ close.addEventListener("click", function (evt) {
 });
 
 form.addEventListener("submit", function (evt) {
-    if (!username.value || !email.value || !user_feedback.value) {
+    if (!error_username.value || !email.value || !user_feedback.value) {
         evt.preventDefault();
-        console.log("Введите имя, электронную почту и напишите отзыв");
-        popup.classList.add("modal-error");
+        if (!username.value) {
+            evt.preventDefault();
+            error_username.classList.remove("modal-error");
+            error_username.offsetWidth = error_username.offsetWidth;
+            error_username.classList.add("modal-error");
+            if (!email.value) {
+                evt.preventDefault();
+                error_email.classList.remove("modal-error");
+                error_email.offsetWidth = error_email.offsetWidth;
+                error_email.classList.add("modal-error");
+                if (!user_feedback.value) {
+                    evt.preventDefault();
+                    error_feedback.classList.remove("modal-error");
+                    error_feedback.offsetWidth = error_feedback.offsetWidth;
+                    error_feedback.classList.add("modal-error");
+                }
+            }
+        }
     }
     else {
         localStorage.setItem("feedback-name", username.value);
         localStorage.setItem("feedback-email", email.value);
-    }
+    }    
 });
 
 window.addEventListener("keydown", function (evt) {
