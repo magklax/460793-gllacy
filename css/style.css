@@ -1185,8 +1185,7 @@ li.dropdown-item-special a {
             transform: translate(-50%);
 }
 
-.catalog-item:hover::after,
-.catalog-item:focus::after { 
+.catalog-item:hover::after { 
     content: "";
      
     z-index: 20;
@@ -1209,29 +1208,55 @@ li.dropdown-item-special a {
     
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
-    transition: 0.2s
+    transition: 0.2s;
+}
+
+.catalog-item a:focus::after { 
+    content: "";
+     
+    z-index: 20;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -13px;
+    width: 293px;
+    height: 405px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    -webkit-box-shadow: 
+        0 20px 20px rgba(0,0,0,0.4)
+        inset 0 3px 7px rgba(0,0,0,0.35);
+            box-shadow: 
+        0 20px 20px rgba(0,0,0,0.4)
+        inset 0 3px 7px rgba(0,0,0,0.35);
+    
+    cursor: pointer;
+    
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
 }
 
 .catalog-item:hover .catalog-btn,
-.catalog-item:focus .catalog-btn {
-    z-index: 20;   
+.catalog-item a:focus ~ .catalog-btn {
+    z-index: 20;
     display: inline-block; 
     vertical-align: top;
     
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
-    transition: 0.2s
+    transition: 0.2s;
 }
 
-.catalog-item:hover .catalog-item-wrapper a, 
-.catalog-item:focus .catalog-item-wrapper a, 
-.catalog-item:hover .catalog-item-wrapper p,
-.catalog-item:focus .catalog-item-wrapper p {
+.catalog-item:hover .catalog-item-wrapper a,
+catalog-item:hover .catalog-item-wrapper p, 
+.catalog-item a:focus .catalog-photo,
+.catalog-item a:focus ~ p {
     z-index: 30;
     
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
-    transition: 0.2s
+    transition: 0.2s;
 }
 
 /*Преимущества*/
@@ -1762,9 +1787,15 @@ li.dropdown-item-special a {
     width: 700px;   
 }
 
-.filter-box li {
-    position: relative;
-    padding: 10px 0 0 21px;
+.filter-box li { 
+    position: relative; 
+    padding: 0 0 0 21px; 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: flex; 
+    -webkit-box-align: center; 
+        -ms-flex-align: center; 
+            align-items: center; 
 }
 
 .filter-box li:first-child {
@@ -1934,7 +1965,8 @@ input[type="radio"]:not(:checked):disabled + label::before {
     display: block;
     width: 25px;
     height: 25px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     
     margin: 0 0 0 3px;
     padding: 3.5px 0; 
