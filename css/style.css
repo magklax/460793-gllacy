@@ -1,7 +1,4 @@
 body {
-    margin: 0;
-    padding: 0;
-
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 16px;
     line-height: 22px;
@@ -16,10 +13,6 @@ body {
     background-image: url("../img/morozki1.png");
     background-position: top center;
     background-repeat: no-repeat;
-}
-
-.background {
-    background-repeat: repeat;
 }
 
 .site-wrapper::before,
@@ -37,8 +30,20 @@ body {
     background-image: url("../img/morozki3.png");
 }
 
+.content-wrapper {
+    margin: 0 auto;
+    padding: 0;
+    width: 1200px;
+}
+
+.container {
+    position: relative;
+    padding: 0 2.3%;
+}
+
 .inner-page {
     background: #849d8f;
+    min-width: 1200px;
 }
 
 /* ОБщие свойства*/
@@ -162,7 +167,7 @@ a {
 
 .btn {
     display: inline-block;
-    padding: 10px 22px;
+    padding: 11px 23px;
     
     color: #ffffff;
     font-size: 18px;
@@ -261,18 +266,6 @@ input[type="radio"].invisible,
             justify-content: space-between;   
     
     position: relative;
-}
-
-.container {
-    position: relative;
-    
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0 27px;
-    
-    -webkit-box-sizing: border-box;
-    
-            box-sizing: border-box;
 }
 
 .main-logo {
@@ -800,10 +793,7 @@ li.dropdown-item-special a {
 /***************************************************************************/
 
 .customer-info {
-    position: absolute;
-    right: 27px;
-    padding: 0;
-        
+    margin-bottom: -45px;
     font-size: 14px;
     line-height: 16px;
     font-weight: 700;
@@ -825,7 +815,6 @@ li.dropdown-item-special a {
     position: relative;
     
     margin-bottom: 40px;
-    padding-bottom: 70px;
     
     text-align: center;
     color: #ffffff;
@@ -841,13 +830,12 @@ li.dropdown-item-special a {
 .slide {
     display: none;
     position: relative;
-    
 }
 
 .slide h3 {
     width: 703px;
     margin: 0 auto;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
     
     font-size: 60px;
     line-height: 60px;
@@ -855,14 +843,7 @@ li.dropdown-item-special a {
 }
 
 .slide-btn {
-    position: absolute;
-    
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-    
-    padding: 12px 44px;
+    padding: 11px 42px;
 
     font-size: 32px;
     line-height: 44px;
@@ -960,7 +941,7 @@ li.dropdown-item-special a {
     position: absolute;
     left: 0;
     bottom: 22px;
-    z-index: 20px;
+    z-index: 20;
     
     font-size: 0;
 }
@@ -1002,22 +983,14 @@ li.dropdown-item-special a {
     
             justify-content: space-between;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     padding: 0;
 }
 
 .promotion-block {
-    position: relative;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    
+    display: flex;
+    flex-direction: column;
+   
     width: 560px;
     min-height: 230px;
     -webkit-box-sizing: border-box;
@@ -1043,27 +1016,27 @@ li.dropdown-item-special a {
 
 .promotions h3 {
     margin: 0;
-    padding: 16px 18px 14px;
+    padding: 16px 18px 15px;
     
     font-size: 35px;
     line-height: 41px;
 }
 .promotions p {
     margin: 0;
-    padding: 0 30px 115px 19px;
+    padding: 0 30px 43px 19px;
     font-size: 18px;
     font-weight: 700;
 }
 
 .promotion-btn {
-    position: absolute;
-    bottom: 25px;
-    right: 22px;
+    padding: 10px 23px;
+    margin: 0 22px 25px auto;
 }
 
 /*Хиты продаж*/
 
 .bestsellers {
+    margin-top: -10px;
     margin-bottom: 40px;
 }
 
@@ -1083,6 +1056,7 @@ li.dropdown-item-special a {
 
 .catalog {
     margin: 0;
+    margin-bottom: 50px;
     padding: 0;
 }
 
@@ -1094,23 +1068,32 @@ li.dropdown-item-special a {
         flex-wrap: wrap;
     
     margin: 0;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     padding: 0;
    
     list-style: none;
 }
 
 .catalog-item {
-    position: relative;
-    margin-right: 26px;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    align-items: center; 
+    
+    margin-right: 25.5px;
     
     width: 267px;
     height: 405px;
+    
+    position: relative;
 }  
 
 .catalog .catalog-item {
-    margin-top: -42px; 
-}  
+    margin-top: -40px;
+    margin-bottom: -3px;
+}
 
 .catalog-item:nth-child(4n) {
     margin-right: 0;
@@ -1124,8 +1107,7 @@ li.dropdown-item-special a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    
-    position: relative;
+    align-items: flex-start;
     min-height: 344px;
     
     color: #ffffff;
@@ -1144,7 +1126,7 @@ li.dropdown-item-special a {
 }
 
 .catalog .catalog-item-title {
-    margin: 13px 0;
+    margin: 14px 0;
     display: inline;
 }
 
@@ -1154,16 +1136,18 @@ li.dropdown-item-special a {
 }
 
 .catalog-photo {
-    margin-top: 7px;
+    margin-top: 8px;
     border-radius: 50%;
 }
 
+.catalog .catalog-photo {
+    margin-top: 5px;
+}
+
 .catalog-item-price {
-    position: relative;
-    
     margin: 0;
-    margin-top: -125px;
-    
+    margin-top: -126px; 
+    margin-right: auto;
     font-size: 45px;
     line-height: 45px;
     font-weight: 700;
@@ -1172,12 +1156,10 @@ li.dropdown-item-special a {
 
 .catalog .catalog-item-price {
     margin-top: -130px;
-    
 }
 
 .catalog .catalog-item-price:last-child {
     margin-top: 0;
-    
 }
 
 .catalog-item-price span {
@@ -1186,44 +1168,11 @@ li.dropdown-item-special a {
 
 .catalog-item .catalog-btn {
     display: none;
-    
-    position: absolute;
-    left: 50%;
-    bottom: 22px;
-    
-    -webkit-transform: translate(-50%);
-    
-        -ms-transform: translate(-50%);
-    
-            transform: translate(-50%);
+    margin-top: 75px;
+    padding: 11px 18px;
 }
 
-.catalog-item:hover::after { 
-    content: "";
-     
-    z-index: 20;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -13px;
-    width: 293px;
-    height: 405px;
-    background-color: rgba(255,255,255,0.2);
-    border-radius: 10px;
-    -webkit-box-shadow: 
-        0 20px 20px rgba(0,0,0,0.4)
-        inset 0 3px 7px rgba(0,0,0,0.35);
-            box-shadow: 
-        0 20px 20px rgba(0,0,0,0.4)
-        inset 0 3px 7px rgba(0,0,0,0.35);
-    
-    cursor: pointer;
-    
-    -webkit-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s;
-}
-
+.catalog-item a:hover::after,
 .catalog-item a:focus::after { 
     content: "";
      
@@ -1261,8 +1210,8 @@ li.dropdown-item-special a {
     transition: 0.2s;
 }
 
-.catalog-item:hover .catalog-item-wrapper a,
-.catalog-item:hover .catalog-item-wrapper p, 
+.catalog-item:hover .catalog-item a,
+.catalog-item:hover .catalog-item p, 
 .catalog-item a:focus .catalog-photo,
 .catalog-item a:focus ~ p {
     z-index: 30;
@@ -1315,13 +1264,17 @@ li.dropdown-item-special a {
 
 .features-list li {
     position: relative;
-    
-    padding-top: 20px;
-    
-    padding-left: 58px;
-    padding-right: 25px;
     width: 480px;
+    
+    padding: 21px 24px 0 58px;
+    
 }
+
+.features-list li:nth-child(2n) {
+    padding-right: 22px;
+    margin-left: 2px;
+}
+
 
 .features-list li:first-child::before, 
 .features-list li:nth-child(2)::before, 
@@ -1416,7 +1369,7 @@ li.dropdown-item-special a {
     background-color: #f8f7f4;
     border-radius: 15px;
     
-    padding: 29px 20px 36px;
+    padding: 28px 21px 37px;
 }
 
 .subscribe-wrapper p {
@@ -1450,17 +1403,7 @@ li.dropdown-item-special a {
 /*Карта*/
 
 .map {
-    position: relative;
     width: 100%;
-    min-height: 430px;
-    
-    margin-top: 40px;  
-    
-    background-image: url("../img/map.jpg");
-    background-color: #849d8f;
-    background-position: 50% 0;
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .map iframe {
@@ -1468,13 +1411,18 @@ li.dropdown-item-special a {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    min-height: 430px;
 }
 
-.map .container {
+.map .content-wrapper {
     position: relative;
+    min-width: 1200px;
     
+    padding-top: 63px;
+    padding-bottom: 62px;
+    padding-right: 2.3;
     display: -webkit-box;
-    
     display: -ms-flexbox;
     
     display: flex;
@@ -1482,14 +1430,14 @@ li.dropdown-item-special a {
         -ms-flex-pack: end;
             justify-content: flex-end;
     
-    min-height: 430px;   
-    min-width: 1200px;
-    
-    margin: 0 auto;
-    
-    
+    background-image: url("../img/map.jpg");
+    background-color: #849d8f;
+    background-position: 50% 0;
+    background-repeat: repeat;
+    background-size: cover;
 }
-.map .container::after {
+
+.map .content-wrapper::after {
     content: "";
     
     position: absolute;
@@ -1506,7 +1454,6 @@ li.dropdown-item-special a {
 
 .map-text-block {
     z-index: 20;
-    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1515,12 +1462,12 @@ li.dropdown-item-special a {
         -ms-flex-direction: column;
             flex-direction: column;
     
-    margin: 63px 0 63px;
-        
-    width: 305px;
+    width: 302px;
+    min-height: 305px;
+    
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    padding: 26px 27px 0;   
+    padding: 26px 25px 25px;
         
     color: #323232;
     border-radius: 15px;
@@ -1557,12 +1504,10 @@ li.dropdown-item-special a {
 }
 
 .map-text:last-of-type {
-    margin-bottom: 100px;
+    margin-bottom: 23px;
 }
 .map-text-block .feedback-btn {
-    position: absolute; 
-    bottom: 32px;
-    padding: 10px 30px;
+    padding: 10px 30.5px;
 }
 
 /**********************Карточка товара**********************/
@@ -1920,14 +1865,12 @@ input[type="radio"]:not(:checked):disabled + label::before {
 }
 
 .filter-btn {
-    position: absolute;
-    
-    bottom: 0;
-    right: -160px;
-    
     height: 36px;
+    box-sizing: border-box;
     
-    padding: 7px 32px 7px 28px;
+    margin-top: 38px;
+    
+    padding: 7px 30px 7px;
     
     font-size: 16px;
     line-height: 18px;
@@ -1964,7 +1907,8 @@ input[type="radio"]:not(:checked):disabled + label::before {
             justify-content: space-between;
     
     width: 195px;
-    margin: 0 0 50px auto;
+    margin: 0;
+    margin-left: auto;
     padding: 0; 
     
     list-style: none;
@@ -2052,7 +1996,7 @@ input[type="radio"]:not(:checked):disabled + label::before {
 /*Футер*/
 
 .main-footer { 
-    margin-top: 17px;
+    margin-top: 15px;
      
     color: #ffffff;
 }
@@ -2078,14 +2022,18 @@ input[type="radio"]:not(:checked):disabled + label::before {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     
-    width: 185px;
+    width: 188px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     
     margin: 0;
-    padding: 21px 5px;
+    padding: 22px 5px;
         
     list-style: none;
+}
+
+.inner-page .footer-social {
+    padding: 20px 5px;
 }
 
 .social-btn {
@@ -2148,9 +2096,13 @@ a.social-btn:active {
     height: 45px;
     width: 305px;
     margin: 0;
-    padding: 16px 2px 0 15px;
+    padding: 18px 5px 0 15px;
            
     list-style: none;   
+}
+
+.inner-page .supplier-info {
+    padding: 14px 5px 0 15px;
 }
 
 .supplier-info a {
@@ -2196,7 +2148,7 @@ a.social-btn:active {
     margin-bottom: 26px;
     padding: 0;
     
-    width: 196px;
+    width: 195px;
     
     font-size: 12px;
     line-height: 18px;
@@ -2211,18 +2163,18 @@ a.social-btn:active {
     
     white-space: nowrap;
     margin: 0;
+    margin-top: -1px;
 }
 
 /* Форма обратной связи*/
 
 .modal-feedback {
     display: none;
-    
     width: 477px;
     min-height: 442px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    padding: 16px 24px 86px;
+    padding: 16px 24px 27px;
     
     z-index: 100;
     position: fixed;
@@ -2247,6 +2199,11 @@ a.social-btn:active {
     transition: 0.2s;
 }
 
+.modal-feedback form {
+    display: flex;
+    flex-direction: column;
+}
+ 
 .modal-feedback h2 {
     margin: 0;
     
@@ -2293,11 +2250,8 @@ textarea[name="feedback-text"] {
     cursor: pointer;
 }
 .modal-btn {
-    position: absolute;
-    
-    bottom: 27px;
-    right: 25px;
     padding: 9px 20px 10px;
+    margin: 25px 0 0 auto;
 }
 
 .modal-overlay {
