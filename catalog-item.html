@@ -98,94 +98,95 @@
                     </div>
                 </div>
         </header>
-        
-            <main class="container">
-                <ul class="breadcrumbs">
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="#">Каталог</a></li>
-                    <li>Сливочное</li>
-                </ul>
-                <h1 class="page-title">Сливочное мороженое</h1> 
+            <main>
+                <div class="container">
+                    <ul class="breadcrumbs">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="#">Каталог</a></li>
+                        <li>Сливочное</li>
+                    </ul>
+                    <h1 class="page-title">Сливочное мороженое</h1> 
 
-                <section class="filters">
-                    <h2 class="invisible">Фильтр товаров</h2>
-                    <form method="get" action="https://echo.htmlacademy.ru">
-                        <div class="filters-wrapper">
-                            <fieldset class="filter-category">
-                                <legend>Сортировка:</legend>
-                                <label for="sort-field" class="invisible">Сортировка:</label>
-                                <select class="filter-box filter-box-sort" id="sort-field" name="sort">
-                                    <option class="select-option">по популярности</option>
-                                    <option class="select-option">сначала недорогие</option>
-                                    <option class="select-option">сначала дорогие</option>
-                                    <option class="select-option">по жирности</option>
-                                </select>
-                            </fieldset>
+                    <section class="filters">
+                        <h2 class="invisible">Фильтр товаров</h2>
+                        <form method="get" action="https://echo.htmlacademy.ru">
+                            <div class="filters-wrapper">
+                                <fieldset class="filter-category">
+                                    <legend>Сортировка:</legend>
+                                    <label for="sort-field" class="invisible">Сортировка:</label>
+                                    <select class="filter-box filter-box-sort" id="sort-field" name="sort">
+                                        <option class="select-option">по популярности</option>
+                                        <option class="select-option">сначала недорогие</option>
+                                        <option class="select-option">сначала дорогие</option>
+                                        <option class="select-option">по жирности</option>
+                                    </select>
+                                </fieldset>
 
-                            <fieldset class="filter-category">
-                                <legend>Цена: 100 руб. - 500 руб.</legend>
+                                <fieldset class="filter-category">
+                                    <legend>Цена: 100 руб. - 500 руб.</legend>
 
-                                <div class="filter-box filter-box-price">
-                                     <div class="main-scale">
-                                        <div class="middle-scale"></div>
-                                     </div>
-                                     <div class="range range-min"></div>
-                                     <div class="range range-max"></div>
-                                </div>
-                            </fieldset>          
+                                    <div class="filter-box filter-box-price">
+                                         <div class="main-scale">
+                                            <div class="middle-scale"></div>
+                                         </div>
+                                         <div class="range range-min"></div>
+                                         <div class="range range-max"></div>
+                                    </div>
+                                </fieldset>          
 
-                            <fieldset class="filter-category">
-                                <legend>Жирность:</legend>
-                                <ul class="filter-box filter-box-fat">
-                                    <li>
-                                        <input type="radio" id="zero" name="fat-content" value="0" disabled>
-                                        <label for="zero">0%</label>
-                                    </li>
-                                    <li>
-                                        <input type="radio" id="less-ten" name="fat-content" value="less 10" checked>
-                                        <label for="less-ten">до 10%</label>
-                                    </li>
-                                    <li>
-                                        <input type="radio" id="less-thirty" name="fat-content" value="less 30">
-                                        <label for="less-thirty">до 30%</label>
-                                    </li>
-                                    <li>
-                                        <input type="radio" id="more-thirty" name="fat-content" value="more 30">
-                                        <label for="more-thirty">выше 30%</label>
-                                    </li>
-                                </ul>
-                            </fieldset>
+                                <fieldset class="filter-category">
+                                    <legend>Жирность:</legend>
+                                    <ul class="filter-box filter-box-fat">
+                                        <li>
+                                            <input type="radio" id="zero" name="fat-content" value="0" disabled>
+                                            <label for="zero">0%</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="less-ten" name="fat-content" value="less 10" checked>
+                                            <label for="less-ten">до 10%</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="less-thirty" name="fat-content" value="less 30">
+                                            <label for="less-thirty">до 30%</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="more-thirty" name="fat-content" value="more 30">
+                                            <label for="more-thirty">выше 30%</label>
+                                        </li>
+                                    </ul>
+                                </fieldset>
 
-                            <fieldset class="filter-category">
-                                <legend>Наполнители:</legend>
-                                <ul class="filter-box filter-box-topping">
-                                    <li>
-                                        <input type="checkbox" id="filter-chocolate" name="chocolate" checked>
-                                        <label for="filter-chocolate">шоколадные</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="filter-sugar" name="sugar" checked>
-                                        <label for="filter-sugar">сахарные присыпки</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="filter-fruit" name="fruit">
-                                        <label for="filter-fruit">фрукты</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="filter-syrup" name="syrup">
-                                        <label for="filter-syrup">сиропы</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="filter-jam" name="jam">
-                                        <label for="filter-jam">джемы</label>
-                                    </li>
-                                </ul>
+                                <fieldset class="filter-category">
+                                    <legend>Наполнители:</legend>
+                                    <ul class="filter-box filter-box-topping">
+                                        <li>
+                                            <input type="checkbox" id="filter-chocolate" name="chocolate" checked>
+                                            <label for="filter-chocolate">шоколадные</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="filter-sugar" name="sugar" checked>
+                                            <label for="filter-sugar">сахарные присыпки</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="filter-fruit" name="fruit">
+                                            <label for="filter-fruit">фрукты</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="filter-syrup" name="syrup">
+                                            <label for="filter-syrup">сиропы</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="filter-jam" name="jam">
+                                            <label for="filter-jam">джемы</label>
+                                        </li>
+                                    </ul>
 
-                            </fieldset>
-                            <button type="submit" class="filter-btn">Применить</button>
-                        </div>  
-                    </form>
-                </section>
+                                </fieldset>
+                                <button type="submit" class="filter-btn">Применить</button>
+                            </div>  
+                        </form>
+                    </section>
+                </div>
 
                 <section class="catalog">
                     <h2 class="invisible">Ассортимент мороженого</h2>
@@ -289,7 +290,7 @@
                                 <p class="catalog-item-price">355₽<span>/кг</span></p>
                                 <a class="btn catalog-btn" href="#">Быстрый просмотр</a>
                         </li>
-                        <!-- Товар №12 -->
+                        <!-- Товар №11 -->
                         <li class="catalog-item">
                                 <a href="#">
                                     <h3 class="catalog-item-title"><span>Сливочноe с мятным сиропом</span></h3>
@@ -299,15 +300,17 @@
                                 <a class="btn catalog-btn" href="#">Быстрый просмотр</a>
                         </li>
                     </ul>
-                    <ul class="pagination-list">
-                      <li class="disabled"><a class="back disabled" href="#"><span class="invisible">Назад</span></a></li>
-                      <li class="pagination-item-current"><a href="#">1</a></li>
-                      <li><a href="#">2</a></li>
-                      <li><a href="#">3</a></li>
-                      <li><a href="#">4</a></li>
-                      <li><a href="#">5</a></li>
-                      <li><a class="next" href="#"><span class="invisible">Вперед</span></a></li>
-                    </ul>
+                    <div class="container">
+                        <ul class="pagination-list">
+                          <li class="disabled"><a class="back disabled" href="#"><span class="invisible">Назад</span></a></li>
+                          <li class="pagination-item-current"><a href="#">1</a></li>
+                          <li><a href="#">2</a></li>
+                          <li><a href="#">3</a></li>
+                          <li><a href="#">4</a></li>
+                          <li><a href="#">5</a></li>
+                          <li><a class="next" href="#"><span class="invisible">Вперед</span></a></li>
+                        </ul>
+                    </div>
                 </section>
             </main>
 
@@ -336,4 +339,3 @@
         </div>
     </body>
 </html>   
-     
