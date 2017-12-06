@@ -201,9 +201,7 @@ a {
             box-shadow: 0 1px 2px #ac1000;   
     
     -webkit-transition: 0.2s;   
-    
     -o-transition: 0.2s;   
-    
     transition: 0.2s
 }
 
@@ -214,7 +212,6 @@ a {
     background: linear-gradient(#f26843, #e74a35);
     
     -webkit-box-shadow: inset 0 2px 2px #942718;
-    
             box-shadow: inset 0 2px 2px #942718;
 }
 
@@ -672,37 +669,29 @@ li.dropdown-item-special a {
 
 .cart:hover .table-box,
 .cart:focus .table-box {
-    display: block;
+    display: flex;
     
     -webkit-transition: 0.2s;
-    
     -o-transition: 0.2s;
-    
     transition: 0.2s
 }
 
 .table-box {
     display: none;
+    flex-direction: column;
     position: absolute;
     z-index: 20;
     top: 51px;
     right: 0;
-    
-    -webkit-box-sizing: border-box;
-    
-            box-sizing: border-box; 
-    
-    padding: 20px 15px 0;
-    
-    border-radius: 5px;
-}
-
-.table-box {
     width: 540px;
-    margin-right: 0;
+    
+    padding: 16px 13px 0 18px;    
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; 
     
     color: #323232;
     
+    border-radius: 5px;
     background-color: #f8f7f4;
     -webkit-box-shadow: 0 20px 20px rgba(0,0,0,0.4);
             box-shadow: 0 20px 20px rgba(0,0,0,0.4);
@@ -713,6 +702,8 @@ li.dropdown-item-special a {
     line-height: 16px;
     width: 100%; 
     border-bottom: 1px solid #cacac7;
+    padding-right: 5px;
+    padding-bottom: 4px;
 }
 
 .cart-table a {
@@ -728,40 +719,42 @@ li.dropdown-item-special a {
 
 .cart-table tr {
     display: table-row;
-    vertical-align: inherit;
+    vertical-align: middle;
     border-color: inherit;
-
 }
 
 .cart-table td {
-    padding-right: 5px;
-    padding-bottom: 15px;    
+    margin-right: 0;
+    box-sizing: border-box;
+    padding-bottom: 14px;
 }
 
 .cart-table td:first-child {
-    width: 20px;
+    width: 18px;
 }
 
 .cart-table td:nth-child(2) {
-    width: 35px;
+    width: 45px;
 }
 
 .cart-table td:nth-child(3) {
-    width: 235px;
-    padding-right: 10px;
+    width: 245px;
 }
 
 .cart-table td:nth-child(4){
-    padding-right: 5px;
-    
-    
+    width: 110px;
 }
 .cart-table td:last-child {
-    padding-right: 20px;
+    padding-right: 18px;
+    
     text-align: right;
 }
 
 .cart-btn {
+    margin: 0 0 22px auto;
+    margin-bottom: 22px;
+    padding: 10px 12px;
+    
     text-align: right;
 }
 
@@ -770,6 +763,7 @@ li.dropdown-item-special a {
 }
 
 .cart-total-price {
+    margin: 15px 0;
     font-size: 15px;
     line-height: 18px;
     
@@ -1030,8 +1024,7 @@ li.dropdown-item-special a {
 }
 
 .promotion-btn {
-    padding: 10px 23px;
-    margin: 0 22px 25px auto;
+    margin: 0 21px 23px auto;
 }
 
 /*Хиты продаж*/
@@ -1408,13 +1401,16 @@ li.dropdown-item-special a {
 
 .map {
     width: 100%;
+    position: relative;
 }
 
 .map iframe {
-    z-index: 10;
     position: absolute;
+    
     top: 0;
     left: 0;
+    
+    z-index: 5;
     width: 100%;
     min-height: 430px;
 }
@@ -1444,6 +1440,7 @@ li.dropdown-item-special a {
 .map .content-wrapper::after {
     content: "";
     
+    z-index: ;
     position: absolute;
     top: 140px;
     left: 265px;
@@ -1457,7 +1454,8 @@ li.dropdown-item-special a {
 }
 
 .map-text-block {
-    z-index: 20;
+    position: relative;
+    z-index: 10;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
