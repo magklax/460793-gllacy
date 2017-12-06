@@ -46,7 +46,6 @@ body {
     min-width: 1200px;
 }
 
-/* ОБщие свойства*/
 a {
     text-decoration: none;
     cursor: pointer;  
@@ -199,7 +198,6 @@ a {
     background: linear-gradient(#f58669,#e74a35);
     -webkit-box-shadow: 0 1px 2px #ac1000;
             box-shadow: 0 1px 2px #ac1000;   
-    
     -webkit-transition: 0.2s;   
     -o-transition: 0.2s;   
     transition: 0.2s
@@ -210,7 +208,6 @@ a {
     background: -webkit-linear-gradient(#f26843, #e74a35);
     background: -o-linear-gradient(#f26843, #e74a35);
     background: linear-gradient(#f26843, #e74a35);
-    
     -webkit-box-shadow: inset 0 2px 2px #942718;
             box-shadow: inset 0 2px 2px #942718;
 }
@@ -247,7 +244,6 @@ input[type="radio"].invisible,
   overflow: hidden;
 }
 
-/*Шапка*/
 .main-header {
     margin-bottom: 320px;
     padding-top: 9px;
@@ -259,10 +255,8 @@ input[type="radio"].invisible,
     display: -ms-flexbox; 
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;   
-    
-    position: relative;
+            -ms-flex-pack: justify;
+        justify-content: space-between;   
 }
 
 .main-logo {
@@ -346,8 +340,6 @@ input[type="radio"].invisible,
     -webkit-box-shadow: inset 0 2px 1px rgba(105,105,105,0);
             box-shadow: inset 0 2px 1px rgba(105,105,105,0);
 }
-
-/***************************************************************************/
 
 .site-nav-item:hover .main-dropdown,
 .site-nav-item:focus .main-dropdown {
@@ -441,15 +433,13 @@ li.dropdown-item-special a {
     border-radius: 0;
 }
 
-/***************************************************************************/
-
 .user-block {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+            -ms-flex-pack: end;
+        justify-content: flex-end;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     
@@ -471,11 +461,8 @@ li.dropdown-item-special a {
     color: #333333;
     
     background-color: #f8f7f4;
-    
     -webkit-transition: 0.2s;
-    
     -o-transition: 0.2s;
-    
     transition: 0.2s
 }
 
@@ -488,8 +475,6 @@ li.dropdown-item-special a {
             box-shadow: 0 20px 20px rgba(0,0,0,0.4);
 }
 
-/***************************************************************************/
-
 .search,
 .login-link,
 .cart {
@@ -500,9 +485,7 @@ li.dropdown-item-special a {
     z-index: 20;
     top: 51px;
     right: 0;
-    
     -webkit-box-sizing: border-box;
-    
             box-sizing: border-box; 
     width: 340px;
     padding: 20px 15px;
@@ -513,11 +496,8 @@ li.dropdown-item-special a {
 .search:hover .search-form,
 .search:focus .search-form {
     display: block;
-    
     -webkit-transition: 0.2s;
-    
     -o-transition: 0.2s;
-    
     transition: 0.2s
 }
 
@@ -541,8 +521,8 @@ li.dropdown-item-special a {
 .search-img {
     left: 50%;
     -webkit-transform: translate(-50%,-50%);
-        -ms-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%)
+            -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%)
 }
 
 .search a:hover .search-img path,
@@ -554,15 +534,10 @@ li.dropdown-item-special a {
 .cart-empty a:focus .cart-img path,
 .cart-empty a:focus .cart-img circle {
     fill: #333333;
-    
     -webkit-transition: 0.2s;
-    
     -o-transition: 0.2s;
-    
     transition: 0.2s
 }
-
-/***************************************************************************/
 
 .user-nav {
     margin: 0;
@@ -572,7 +547,6 @@ li.dropdown-item-special a {
 }
 
 .login-form {
-    
     z-index: 20;
    
     top: 51px;
@@ -586,11 +560,8 @@ li.dropdown-item-special a {
 .user-nav:hover .login-form,
 .user-nav:focus .login-form {
     display: block;
-    
     -webkit-transition: 0.2s;
-    
     -o-transition: 0.2s;
-    
     transition: 0.2s
 }
 
@@ -611,8 +582,8 @@ li.dropdown-item-special a {
 .cart-img {
     left: 15px;
     -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%)
+            -ms-transform: translateY(-50%);
+        transform: translateY(-50%)
 }
 
 .login-btn {
@@ -642,8 +613,6 @@ li.dropdown-item-special a {
     margin-top: 0;    
 }
 
-/***************************************************************************/
-
 .cart {
     margin: 0;
     padding: 0;
@@ -665,12 +634,11 @@ li.dropdown-item-special a {
     background-color: #f8f7f4;
 }
 
-/***************************************************************************/
-
 .cart:hover .table-box,
 .cart:focus .table-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
     transition: 0.2s
@@ -678,14 +646,17 @@ li.dropdown-item-special a {
 
 .table-box {
     display: none;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+        flex-direction: column;
     position: absolute;
     z-index: 20;
     top: 51px;
     right: 0;
     width: 540px;
     
-    padding: 16px 13px 0 18px;    
+    padding: 16px 13px 0 18px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; 
     
@@ -725,7 +696,8 @@ li.dropdown-item-special a {
 
 .cart-table td {
     margin-right: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding-bottom: 14px;
 }
 
@@ -784,8 +756,6 @@ li.dropdown-item-special a {
     
     cursor: pointer;
 }
-
-/***************************************************************************/
 
 .customer-info {
     margin-bottom: -45px;
@@ -957,11 +927,8 @@ li.dropdown-item-special a {
 
 .slider-control label:hover {
     background-color: rgba(255,255,255,0.4);
-    
     -webkit-transition: 0.2s;
-    
     -o-transition: 0.2s;
-    
     transition: 0.2s
 }
 
@@ -974,17 +941,22 @@ li.dropdown-item-special a {
     
     -webkit-box-pack: justify;
     
-        -ms-flex-pack: justify;
+            -ms-flex-pack: justify;
     
-            justify-content: space-between;
+        justify-content: space-between;
     margin: 0;
     margin-bottom: 40px;
     padding: 0;
 }
 
 .promotion-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+        flex-direction: column;
    
     width: 560px;
     min-height: 230px;
@@ -1027,8 +999,6 @@ li.dropdown-item-special a {
     margin: 0 21px 23px auto;
 }
 
-/*Хиты продаж*/
-
 .bestsellers {
     margin-top: -10px;
     margin-bottom: 40px;
@@ -1045,8 +1015,6 @@ li.dropdown-item-special a {
     
     background-image: url("../img/hit.svg");
 }
-
-/*Каталог*/
 
 .catalog {
     margin: 0;
@@ -1165,6 +1133,7 @@ li.dropdown-item-special a {
 
 .catalog-item .catalog-btn {
     display: none;
+    
     margin-top: 75px;
     padding: 11px 18px;
 }
@@ -1196,9 +1165,10 @@ li.dropdown-item-special a {
     transition: 0.2s;
 }
 
-.catalog-item:hover .catalog-btn,
+.catalog-item a:hover ~ .catalog-btn,
 .catalog-item a:focus ~ .catalog-btn {
     z-index: 20;
+    
     display: inline-block; 
     vertical-align: top;
     
@@ -1207,18 +1177,18 @@ li.dropdown-item-special a {
     transition: 0.2s;
 }
 
-.catalog-item:hover .catalog-item a,
-.catalog-item:hover .catalog-item p, 
+.catalog-item a:hover .catalog-photo,
+.catalog-item a:hover .bestseller-img-wrapper,
+.catalog-item a:hover ~ p, 
 .catalog-item a:focus .catalog-photo,
 .catalog-item a:focus ~ p {
-    z-index: 30;
+    z-index: 100;
     
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
     transition: 0.2s;
 }
 
-/*Преимущества*/
 
 .features {
     width: 100%;
@@ -1249,9 +1219,7 @@ li.dropdown-item-special a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-       
     -ms-flex-wrap: wrap;
-       
         flex-wrap: wrap;
     margin: 0;
     padding: 0;
@@ -1271,7 +1239,6 @@ li.dropdown-item-special a {
     padding-right: 22px;
     margin-left: 2px;
 }
-
 
 .features-list li:first-child::before, 
 .features-list li:nth-child(2)::before, 
@@ -1307,8 +1274,6 @@ li.dropdown-item-special a {
     background-image: url("../img/thermometer.svg");
 }
 
-/*Блог*/
-
 .blog-preview {
     width: 560px;
     min-height: 170px;
@@ -1341,8 +1306,6 @@ li.dropdown-item-special a {
     font-weight: 700;   
 }
 
-/*Подписка*/
-
 .subscribe {
     width: 560px;
     -webkit-box-sizing: border-box;
@@ -1371,7 +1334,6 @@ li.dropdown-item-special a {
 
 .subscribe-wrapper p {
     margin: 0;
-    
 }
 
 .subscribe-wrapper .subscribe-form {
@@ -1381,8 +1343,8 @@ li.dropdown-item-special a {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+            -ms-flex-pack: justify;
+        justify-content: space-between;
     
     margin-top: 35px;  
 }
@@ -1396,8 +1358,6 @@ li.dropdown-item-special a {
 .subscribe-wrapper .subscribe-btn {
     padding: 10px 16px;
 }
-
-/*Карта*/
 
 .map {
     width: 100%;
@@ -1422,13 +1382,15 @@ li.dropdown-item-special a {
     padding-top: 63px;
     padding-bottom: 62px;
     padding-right: 2.3;
+    
     display: -webkit-box;
+    
     display: -ms-flexbox;
     
     display: flex;
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+            -ms-flex-pack: end;
+        justify-content: flex-end;
     
     background-image: url("../img/map.jpg");
     background-color: #849d8f;
@@ -1461,12 +1423,11 @@ li.dropdown-item-special a {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+            -ms-flex-direction: column;
+        flex-direction: column;
     
     width: 302px;
     min-height: 305px;
-    
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding: 26px 25px 25px;
@@ -1512,14 +1473,10 @@ li.dropdown-item-special a {
     padding: 10px 30.5px;
 }
 
-/**********************Карточка товара**********************/
-
 .inner-page .main-header {
     margin-bottom: 26px;
     padding-top: 9px;
 }
-
-/*Хлебные крошки*/
 
 .breadcrumbs {
     margin: 0;
@@ -1530,8 +1487,8 @@ li.dropdown-item-special a {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+            -ms-flex-pack: justify;
+        justify-content: space-between;
     
     list-style: none;
     
@@ -1570,8 +1527,6 @@ li.dropdown-item-special a {
     line-height: 41px;
 }
 
-/*Фильтры*/
-
 .filters {
     margin-bottom: 75px;
 }
@@ -1581,8 +1536,8 @@ li.dropdown-item-special a {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+            -ms-flex-pack: start;
+        justify-content: flex-start;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
 }
@@ -1609,8 +1564,6 @@ li.dropdown-item-special a {
     min-height: 36px;
 }
 
-/*Сортировка*/
-
 .filter-box-sort {
     padding: 9px 40px 9px 15px;
     
@@ -1618,7 +1571,6 @@ li.dropdown-item-special a {
     background-repeat: no-repeat;
     background-position: 168px 50%;
     border: none;
-    
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
@@ -1627,7 +1579,6 @@ li.dropdown-item-special a {
 .filter-category .filter-box-sort:hover {
     color: #323232;
     background-color: #ffffff;
-    
     background-image: url("../img/select-arrow-dark.svg");
 }
 
@@ -1657,8 +1608,6 @@ li.dropdown-item-special a {
     background-color: #9db1a5;
     border-radius: 18px;
 }
-
-/*Цена*/
 
 .filter-box-price {
     position: relative;
@@ -1704,11 +1653,8 @@ li.dropdown-item-special a {
 .filter-box-price .range:hover {
     -webkit-box-shadow: 0 0 0 1px #ffffff;
             box-shadow: 0 0 0 1px #ffffff;
-  
     -webkit-transition: 0.2s;
-  
     -o-transition: 0.2s;
-  
     transition: 0.2s
 }
 
@@ -1720,17 +1666,12 @@ li.dropdown-item-special a {
     right: 65px;
 }
 
-/*Жирность/Наполнители*/
-
 .filter-box-fat,
 .filter-box-topping {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    
     display: -webkit-box;
-    
     display: -ms-flexbox;
-    
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -1754,8 +1695,8 @@ li.dropdown-item-special a {
     display: -ms-flexbox; 
     display: flex; 
     -webkit-box-align: center; 
-        -ms-flex-align: center; 
-            align-items: center; 
+            -ms-flex-align: center; 
+        align-items: center; 
 }
 
 .filter-box li:first-child {
@@ -1834,11 +1775,8 @@ input[type="radio"]:checked:hover + label::after,
 input[type="checkbox"]:not(:checked):hover + label::before,
 input[type="checkbox"]:checked:hover + label::after { 
     opacity: 1;
-    
     -webkit-transition: 0.1s;
-    
     -o-transition: 0.1s;
-    
     transition: 0.1s;
 }
 input[type="radio"]:checked:focus + label::after, 
@@ -1848,7 +1786,6 @@ input[type="checkbox"]:not(:checked):focus + label::before,
 input[type="checkbox"]:checked:focus + label::after {
     outline: -webkit-focus-ring-color auto 5px;
     opacity: 1;
-    
     -webkit-transition: 0.1s;
     -o-transition: 0.1s;
     transition: 0.1s;
@@ -1868,7 +1805,8 @@ input[type="radio"]:not(:checked):disabled + label::before {
 
 .filter-btn {
     height: 36px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     
     margin-top: 38px;
     
@@ -1888,7 +1826,6 @@ input[type="radio"]:not(:checked):disabled + label::before {
     color: #323232;
     
     background-color: #ffffff;
-    
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
     transition: 0.2s
@@ -1905,8 +1842,8 @@ input[type="radio"]:not(:checked):disabled + label::before {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+            -ms-flex-pack: justify;
+        justify-content: space-between;
     
     width: 195px;
     margin: 0;
@@ -1963,7 +1900,6 @@ input[type="radio"]:not(:checked):disabled + label::before {
 .pagination-list a.next:focus,
 .pagination-list a.next:active {
     background-color: transparent;  
-    
     -webkit-transition: 0.2s;  
     -o-transition: 0.2s;  
     transition: 0.2s
@@ -1980,10 +1916,9 @@ input[type="radio"]:not(:checked):disabled + label::before {
     background-image: url("../img/next.svg");
     background-repeat: no-repeat;
     background-position: center right;
-        
     -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
 }
 
 .pagination-list li:last-child {
@@ -1994,8 +1929,6 @@ input[type="radio"]:not(:checked):disabled + label::before {
     background-repeat: no-repeat;
     background-position: center right; 
 }
-
-/*Футер*/
 
 .main-footer { 
     margin-top: 15px;
@@ -2008,8 +1941,8 @@ input[type="radio"]:not(:checked):disabled + label::before {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+            -ms-flex-pack: justify;
+        justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
 }
@@ -2019,8 +1952,8 @@ input[type="radio"]:not(:checked):disabled + label::before {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+            -ms-flex-pack: justify;
+        justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     
@@ -2042,8 +1975,6 @@ input[type="radio"]:not(:checked):disabled + label::before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    /*align-items: center;
-    justify-content: center;*/
     width: 31px;
     height: 31px;
     -webkit-box-shadow: 
@@ -2065,11 +1996,8 @@ a.social-btn:focus {
         0 0 0 3px rgba(233,233,233,0.7), 
         inset 0 0 0 1px rgba(233,233,233,0.6);
     opacity: 1;
-    
     -webkit-transition: 0.2s;
-    
     -o-transition: 0.2s;
-    
     transition: 0.2s
 }
 
@@ -2088,8 +2016,8 @@ a.social-btn:active {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+            -ms-flex-direction: column;
+        flex-direction: column;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     
@@ -2125,11 +2053,8 @@ a.social-btn:active {
 .supplier-info a:focus .icon path, 
 .supplier-info a:active .icon path {
     fill: #ffbc9e;
-    
     -webkit-transition: 0.2s;
-    
     -o-transition: 0.2s;
-    
     transition: 0.2s
 }
 
@@ -2168,8 +2093,6 @@ a.social-btn:active {
     margin-top: -1px;
 }
 
-/* Форма обратной связи*/
-
 .modal-feedback {
     display: none;
     width: 477px;
@@ -2195,15 +2118,19 @@ a.social-btn:active {
     display: block;   
     -webkit-animation: appearance 0.3s;   
             animation: appearance 0.3s;    
-    
     -webkit-transition: 0.2s;    
     -o-transition: 0.2s;    
     transition: 0.2s;
 }
 
 .modal-feedback form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+        flex-direction: column;
 }
  
 .modal-feedback h2 {
