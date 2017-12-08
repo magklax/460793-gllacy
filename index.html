@@ -8,9 +8,9 @@
         <link href="css/style.css" rel="stylesheet">        
     </head>
     <body>
-        <input class="invisible" type="radio" id="product-1" name="toggle" checked>
-        <input class="invisible" type="radio" id="product-2" name="toggle">
-        <input class="invisible" type="radio" id="product-3" name="toggle">
+        <input class="invisible product-1" type="radio" id="product-1" name="toggle" checked>
+        <input class="invisible product-2" type="radio" id="product-2" name="toggle">
+        <input class="invisible product-3" type="radio" id="product-3" name="toggle">
         
         <div class="site-wrapper">
             <div class="content-wrapper">  
@@ -95,7 +95,7 @@
                         <div class="index-columns">
                         <div class="promotion-block promotion-block-left">
                             <h3>Малинка даром!</h3>
-                            <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+                            <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно. </p>
                             <a class="btn promotion-btn" href="#">Хочу варенье!</a>
                         </div>
                         <div class="promotion-block promotion-block-right">
@@ -108,42 +108,34 @@
                     <section class="bestsellers">
                         <h2 class="invisible">Хиты продаж</h2>
                         <ul class="catalog-list">
-                            <li class="catalog-item">
+                            <li class="catalog-item catalog-item-hit">
                                 <a href="#">
-                                    <h3 class="bestseller-item-title"><span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span></h3>
-                                    <div class="bestseller-img-wrapper">
-                                        <img class="catalog-photo" src="img/good-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-                                    </div>
+                                    <h3 class="bestseller-item-title"><span>Сливочное с апельсиновым джемом и цитрусовой стружкойСливочное с апельсиновым джемом и цитрусовой стружкойСливочное с апельсиновым джемом и цитрусовой стружкой</span></h3>
+                                    <img class="catalog-photo" src="img/good-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                                 </a>
                                 <p class="catalog-item-price">310₽<span>/кг</span></p>
                                 <a class="btn catalog-btn" href="#">Быстрый просмотр</a>
                             </li> 
-                            <li class="catalog-item">
+                            <li class="catalog-item catalog-item-hit">
                                 <a href="#">
                                     <h3 class="bestseller-item-title"><span>Сливочно-кофейное с кусочками шоколада</span></h3>
-                                    <div class="bestseller-img-wrapper">
-                                        <img class="catalog-photo" src="img/good-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-                                    </div>
+                                    <img class="catalog-photo" src="img/good-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
                                 </a>
                                 <p class="catalog-item-price">380₽<span>/кг</span></p>
                                 <a class="btn catalog-btn" href="#">Быстрый просмотр</a>
                             </li> 
-                            <li class="catalog-item">
+                            <li class="catalog-item catalog-item-hit">
                                 <a href="#">
                                     <h3 class="bestseller-item-title"><span>Сливочно-клубничное с присыпкой из белого шоколада</span></h3>
-                                    <div class="bestseller-img-wrapper">    
-                                        <img class="catalog-photo" src="img/good-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-                                    </div>
+                                    <img class="catalog-photo" src="img/good-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                                 </a>
                                 <p class="catalog-item-price">355₽<span>/кг</span></p>
                                 <a class="btn catalog-btn" href="#">Быстрый просмотр</a>
                             </li>
-                            <li class="catalog-item">
+                            <li class="catalog-item catalog-item-hit">
                                 <a href="#">
                                     <h3 class="bestseller-item-title"><span>Сливочное крем-брюле с карамельной подливкой</span></h3>
-                                    <div class="bestseller-img-wrapper">
-                                        <img class="catalog-photo" src="img/good-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-                                    </div>
+                                    <img class="catalog-photo" src="img/good-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                                 </a>
                                 <p class="catalog-item-price">415₽<span>/кг</span></p>
                                 <a class="btn catalog-btn" href="#">Быстрый просмотр</a>
@@ -195,7 +187,7 @@
                         <b>8 812 450-25-25</b>
                         <span>(с 10 до 20 ежедневно)</span>
                         </p>                      
-                        <a class="btn feedback-btn" href="#">Форма обратной связи</a>
+                        <a class="btn feedback-btn" href="feedback.html">Форма обратной связи</a>
                     </div>    
                 </div>
             </div>
@@ -212,10 +204,10 @@
                             </a></li>
                         </ul>
                         <ul class="supplier-info">
-                                <li><a class="site-link-light" href="#"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13"><path fill="#FFF" d="M10.799 0c-1.35 0-2.551.65-3.3 1.661C6.75.65 5.549 0 4.199 0 1.875 0 0 1.806 0 4.044 0 7.223 7.499 13 7.499 13s7.499-5.777 7.499-8.956C14.998 1.806 13.123 0 10.799 0z"/></svg>Для поставщиков</a></li>
-                                <li><a class="site-link-light" href="#">О производстве</a></li>
-                                <li><a class="site-link-light" href="#">Наши документы</a></li>
-                                <li><a class="site-link-light" href="#">Экологические стандарты</a></li>
+                            <li><a class="site-link-light" href="#"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13"><path fill="#FFF" d="M10.799 0c-1.35 0-2.551.65-3.3 1.661C6.75.65 5.549 0 4.199 0 1.875 0 0 1.806 0 4.044 0 7.223 7.499 13 7.499 13s7.499-5.777 7.499-8.956C14.998 1.806 13.123 0 10.799 0z"/></svg>Для поставщиков</a></li>
+                            <li><a class="site-link-light" href="#">О производстве</a></li>
+                            <li><a class="site-link-light" href="#">Наши документы</a></li>
+                            <li><a class="site-link-light" href="#">Экологические стандарты</a></li>                            
                         </ul>
                         <div class="footer-copyright">
                             <a href="https://htmlacademy.ru"><img src="img/logo-htmlacademy-small.png" width="108" height="39" alt="Логотип HTML Academy"></a>
